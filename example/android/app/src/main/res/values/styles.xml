@@ -1,0 +1,79 @@
+<!--
+  ~ Copyright 2020 ZUP IT SERVICOS EM TECNOLOGIA E INOVACAO SA
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorWhite</item>
+        <item name="colorPrimaryDark">@color/colorWhite</item>
+        <item name="colorAccent">@color/colorDark</item>
+        <item name="android:textColor">@color/colorDark</item>
+        <item name="android:windowBackground">@color/colorWhite</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+    </style>
+
+    <style name="DefaultTextAppearance">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="DefaultTextAppearance.CustomText">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="DefaultButton">
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="background">@drawable/bg_button</item>
+        <item name="textAllCaps">false</item>
+    </style>
+
+    <style name="DefaultButton.CustomButton">
+        <item name="background">@drawable/bg_button</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="DefaultButton.OrangeButton">
+        <item name="android:background">@drawable/bg_button_orange</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="DefaultButton.GreenButton">
+        <item name="android:background">@drawable/bg_button_green</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="DefaultToolbar">
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="backgroundColor">@color/colorDark</item>
+        <item name="navigationIcon">?attr/homeAsUpIndicator</item>
+    </style>
+
+    <style name="DefaultToolbar.CustomToolbar">
+        <item name="android:textColor">@color/colorDark</item>
+        <item name="backgroundColor">@color/colorWhite</item>
+        <item name="navigationIcon">@drawable/ic_back</item>
+        <item name="titleTextAppearance">@style/CustomTitleToolbar</item>
+        <item name="centerTitle">true</item>
+    </style>
+
+    <style name="CustomTitleToolbar">
+        <item name="android:textColor">@color/colorDark</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+</resources>

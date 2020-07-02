@@ -1,0 +1,10 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '10.0'
+
+target 'beagle-hack-day' do
+  use_frameworks!
+  pod 'Beagle'
+  pod 'Beagle/Preview'
+  pod 'YogaKit', :git => 'https://github.com/lucasaraujo/yoga.git'
+
+end

@@ -1,0 +1,46 @@
+PODS:
+  - Beagle (1.0.0):
+    - Beagle/Beagle (= 1.0.0)
+  - Beagle/Beagle (1.0.0):
+    - BeagleSchema (= 1.0.0)
+    - YogaKit
+  - Beagle/Preview (1.0.0):
+    - Beagle/Beagle
+    - Starscream
+  - BeagleSchema (1.0.0)
+  - Starscream (4.0.3)
+  - Yoga (1.14.0)
+  - YogaKit (1.18.1):
+    - Yoga (~> 1.14)
+
+DEPENDENCIES:
+  - Beagle
+  - Beagle/Preview
+  - YogaKit (from `https://github.com/lucasaraujo/yoga.git`)
+
+SPEC REPOS:
+  trunk:
+    - Beagle
+    - BeagleSchema
+    - Starscream
+    - Yoga
+
+EXTERNAL SOURCES:
+  YogaKit:
+    :git: https://github.com/lucasaraujo/yoga.git
+
+CHECKOUT OPTIONS:
+  YogaKit:
+    :commit: 18c001c17865e77e56b70ff7ac7048deb5cbe56a
+    :git: https://github.com/lucasaraujo/yoga.git
+
+SPEC CHECKSUMS:
+  Beagle: 4c08b3b63abfcfcaadacfd7cb45363941dcca648
+  BeagleSchema: 31c586f081a6d6497cbf4b3e77027d16319e0e87
+  Starscream: ef06f0961fff0880bca0604416d61141e4faca67
+  Yoga: cff67a400f6b74dc38eb0bad4f156673d9aa980c
+  YogaKit: 3a733275fd1639b96a304f6f5c11421478371e6b
+
+PODFILE CHECKSUM: 98900b69f3507adb48ffb46dc3281a23797b98f8
+
+COCOAPODS: 1.9.0
