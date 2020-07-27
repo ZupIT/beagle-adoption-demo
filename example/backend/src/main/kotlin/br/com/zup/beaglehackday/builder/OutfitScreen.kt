@@ -80,7 +80,7 @@ class OutfitScreen : ScreenBuilder {
         return Container(
             context = ContextData(
                 id = "context",
-                value = "$23.99"
+                value = ShirtData(shirtId = "123123", shirtPrice = "$23.99")
             ),
             children = listOf(
                 outfitImage(),
@@ -121,36 +121,28 @@ class OutfitScreen : ScreenBuilder {
         )
     }
 
+    private fun buildSetContextFor(value: String): SetContext {
+        return  SetContext("context", path = "shirtPrice", value = value)
+    }
+
     private fun outfitColors(): Widget {
         return ColorSelector(
             colors = listOf(
                 Color(
                     hex = "#ECECED",
-                    onPress = SetContext(
-                        contextId = "context",
-                        value = "$23.99"
-                    )
+                    onPress = buildSetContextFor(value = "$23.99")
                 ),
                 Color(
                     hex = "#D7D8DA",
-                    onPress = SetContext(
-                        contextId = "context",
-                        value = "$25.99"
-                    )
+                    onPress = buildSetContextFor(value = "$25.99")
                 ),
                 Color(
                     hex = "#394657",
-                    onPress = SetContext(
-                        contextId = "context",
-                        value = "$29.99"
-                    )
+                    onPress = buildSetContextFor(value = "$27.99")
                 ),
                 Color(
                     hex = "#B38B6D",
-                    onPress = SetContext(
-                        contextId = "context",
-                        value = "$25.99"
-                    )
+                    onPress = buildSetContextFor(value = "$29.99")
                 )
             )
         ).applyStyle(
@@ -170,7 +162,7 @@ class OutfitScreen : ScreenBuilder {
                     Style(cornerRadius = CornerRadius(20.0))
                 ),
                 ImageDetail(
-                    value = expressionOf("@{context}"),
+                    value = expressionOf("@{context.shirtPrice}"),
                     image = ImageType.RED_HEART
                 ).applyStyle(
                     Style(
@@ -196,3 +188,8 @@ class OutfitScreen : ScreenBuilder {
         )
     }
 }
+
+data class ShirtData(
+        val shirtId: String,
+        val shirtPrice: String
+)
