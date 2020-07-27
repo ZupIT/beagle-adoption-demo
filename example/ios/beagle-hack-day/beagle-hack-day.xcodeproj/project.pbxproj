@@ -211,7 +211,6 @@
 			buildConfigurationList = 7C5CC796247DBA2800F787D4 /* Build configuration list for PBXNativeTarget "beagle-hack-day" */;
 			buildPhases = (
 				C4C610F9110AE09175BFDB5A /* [CP] Check Pods Manifest.lock */,
-				7C015B3F248189D600E5FF77 /* Sourcery */,
 				7C5CC77E247DBA2300F787D4 /* Sources */,
 				7C5CC77F247DBA2300F787D4 /* Frameworks */,
 				7C5CC780247DBA2300F787D4 /* Resources */,
@@ -288,24 +287,6 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-beagle-hack-day/Pods-beagle-hack-day-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
-		};
-		7C015B3F248189D600E5FF77 /* Sourcery */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = Sourcery;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "sourcery --config $SRCROOT\n\n";
 		};
 		C4C610F9110AE09175BFDB5A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
