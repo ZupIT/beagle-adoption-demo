@@ -16,9 +16,15 @@
  */
 
 import Beagle
-import UIKit
 
-class ViewController: UIViewController {
+protocol HomeViewActionsDelegate {
+    func demoButtonTapped()
+    func previewButtonTapped()
+}
+
+class HomeView: UIView {
+    
+    private var delegate: HomeViewActionsDelegate?
     
     private lazy var beagleImage: UIImageView = {
         let image = UIImageView()
@@ -43,15 +49,44 @@ class ViewController: UIViewController {
         return button
     }()
     
-    var charlesManager: CharlesManaging = CharlesManager()
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .white
-        setupViewLayout()
-        setupActions()
+    init(delegate: HomeViewActionsDelegate) {
+        super.init(frame: .zero)
+        self.delegate = delegate
+        setup()
     }
     
+    @available(*, unavailable)
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+}
+
+//MARK: - ViewCode
+extension HomeView: ViewCode {
+    func setupHierarchy() {
+        addSubview(beagleImage)
+        addSubview(livePreviewButton)
+        addSubview(previewButton)
+    }
+    
+    func setupConstraints() {
+        beagleImage.anchor(top: safeAreaLayoutGuide.topAnchor, left: leftAnchor, right: rightAnchor, topConstant: 20, leftConstant: 20, rightConstant: 20)
+        
+        livePreviewButton.anchor(top: beagleImage.bottomAnchor, left: leftAnchor, right: rightAnchor, topConstant: 100, leftConstant: 20, rightConstant: 20, heightConstant: 50)
+        
+        previewButton.anchor(top: livePreviewButton.bottomAnchor, left: leftAnchor, right: rightAnchor, topConstant: 50, leftConstant: 20, rightConstant: 20, heightConstant: 50)
+    }
+    
+    func additionalConfigurations() {
+        setupActions()
+        backgroundColor = .white
+    }
+    
+}
+
+//MARK: - Actions
+extension HomeView {
     private func setupActions() {
         previewButton.addTarget(self, action: #selector(handleDemoButtonTap), for: .touchUpInside)
         livePreviewButton.addTarget(self, action: #selector(handlePreviewButtonTap), for: .touchUpInside)
@@ -59,30 +94,11 @@ class ViewController: UIViewController {
     
     @objc
     private func handlePreviewButtonTap() {
-        BeaglePreview.present(in: self)
+        delegate?.previewButtonTapped()
     }
     
     @objc
     private func handleDemoButtonTap() {
-        presentDemoScreen()
-    }
-    
-    private func presentDemoScreen() {
-        let vc = BeagleScreenViewController(.remote(.init(url: Constants.outfit)))
-        self.navigationController?.pushViewController(vc, animated: true)
-    }
-    
-    private func setupViewLayout() {
-        view.addSubview(beagleImage)
-        view.addSubview(livePreviewButton)
-        view.addSubview(previewButton)
-        
-        beagleImage.anchor(top: view.safeAreaLayoutGuide.topAnchor, left: view.leftAnchor, right: view.rightAnchor, topConstant: 20, leftConstant: 20, rightConstant: 20)
-        
-        livePreviewButton.anchor(top: beagleImage.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor, topConstant: 100, leftConstant: 20, rightConstant: 20, heightConstant: 50)
-        
-        previewButton.anchor(top: livePreviewButton.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor, topConstant: 50, leftConstant: 20, rightConstant: 20, heightConstant: 50)
+        delegate?.demoButtonTapped()
     }
 }
-
-

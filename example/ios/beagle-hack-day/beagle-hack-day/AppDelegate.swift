@@ -30,7 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         BeagleConfig.config()
         
-        let remotevc = ViewController()
+        let remotevc = HomeViewController()
    
         let navigationController = UINavigationController(rootViewController: remotevc)
         navigationController.isNavigationBarHidden = true
