@@ -17,7 +17,7 @@
 
 import UIKit
 
-class ImageDetailsUIComponent: UIView {
+class ImageDetails: UIView {
     
     private lazy var label: UILabel = {
         let label = UILabel()
@@ -31,11 +31,11 @@ class ImageDetailsUIComponent: UIView {
     }()
     
     private lazy var circleView: UIView = {
-        let roundView = UIView()
-        roundView.backgroundColor = .white
-        roundView.clipsToBounds = true
-        roundView.layer.cornerRadius = 15
-        return roundView
+        let view = UIView()
+        view.backgroundColor = .white
+        view.clipsToBounds = true
+        view.layer.cornerRadius = 15
+        return view
     }()
     
     private lazy var heartView: UIImageView = {
@@ -53,13 +53,14 @@ class ImageDetailsUIComponent: UIView {
     
     let image: String
     
-    init(value: String = "", image: String) {
+    init(value: String = String(), image: String) {
         self.value = value
         self.image = image
         super.init(frame: .zero)
         setup()
     }
     
+    @available(*, unavailable)
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -68,11 +69,18 @@ class ImageDetailsUIComponent: UIView {
         .init(width: size.width, height: 40)
     }
     
-    private func setup() {
+}
+
+//MARK: - ViewCode
+extension ImageDetails: ViewCode {
+    
+    func setupHierarchy() {
         addSubview(label)
         addSubview(circleView)
         circleView.addSubview(heartView)
-        
+    }
+    
+    func setupConstraints() {
         label.anchor(left: leftAnchor, widthConstant: 100, heightConstant: 30)
         label.anchorCenterYToSuperview()
         circleView.anchor(right: rightAnchor, widthConstant: 30, heightConstant: 30)
@@ -80,4 +88,5 @@ class ImageDetailsUIComponent: UIView {
         heartView.anchor(widthConstant: 10, heightConstant: 10)
         heartView.anchorCenterSuperview()
     }
+    
 }
