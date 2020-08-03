@@ -51,7 +51,7 @@ class ScrollSelector: UIView {
         }
     }
     
-    // MARK: init
+    // MARK: Init
     init(selectorType: SelectorType) {
         self.type = selectorType
         super.init(frame: .zero)
@@ -120,7 +120,7 @@ extension ScrollSelector: UICollectionViewDelegateFlowLayout, UICollectionViewDa
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: type.reuseId(), for: indexPath)
-        (cell as? SelectorCell)?.setupCell(text: type.itens()[indexPath.row], isSelected: indexPath.row == selectedIndex)
+        (cell as? SelectorCell)?.setup(text: type.itens()[indexPath.row], isSelected: indexPath.row == selectedIndex)
         return cell
     }
     

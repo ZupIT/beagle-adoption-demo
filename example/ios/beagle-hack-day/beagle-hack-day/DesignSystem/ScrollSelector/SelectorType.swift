@@ -17,40 +17,40 @@
 
 import Foundation
 
-extension ScrollSelector {
-    enum SelectorType {
-        case color(colors: [String])
-        case size(sizes: [String])
-        
-        func itens() -> [String] {
-            switch self {
-            case .color(let colorsList):
-                return colorsList
-            case .size(let sizesList):
-                return sizesList
-            }
-        }
-        
-        func reuseId() -> String {
-            switch self {
-            case .color:
-                return ColorCell.reuseId
-            case .size:
-                return SizeCell.reuseId
-            }
-        }
-        
-        func getDescription() -> String {
-            switch self {
-            case .color:
-                return "Color"
-            case .size:
-                return "Size"
-            }
-        }
-        
-        func getSelectedValue(index: Int) -> String {
-            itens()[index]
+enum SelectorType {
+    
+    case color(colors: [String])
+    case size(sizes: [String])
+    
+    func itens() -> [String] {
+        switch self {
+        case .color(let colorsList):
+            return colorsList
+        case .size(let sizesList):
+            return sizesList
         }
     }
+    
+    func reuseId() -> String {
+        switch self {
+        case .color:
+            return ColorCell.reuseId
+        case .size:
+            return SizeCell.reuseId
+        }
+    }
+    
+    func getDescription() -> String {
+        switch self {
+        case .color:
+            return "Color"
+        case .size:
+            return "Size"
+        }
+    }
+    
+    func getSelectedValue(index: Int) -> String {
+        itens()[index]
+    }
+    
 }

@@ -23,13 +23,13 @@ class BeagleConfig {
     static let dependencies = BeagleDependencies()
     static let client = NetworkClientDefault(dependencies: dependencies)
     
-    /// Config Beagle
-    static func config() {
+    private init() {}
 
+    static func setup() {
         BeagleConfig.registerValidatorProviders(in: dependencies)
         BeagleConfig.setAppTheme(in: dependencies)
         BeagleConfig.setNetworkClient(in: dependencies)
-        dependencies.urlBuilder = UrlBuilder(baseUrl: URL(string: Constants.serverAdress))
+        dependencies.urlBuilder = UrlBuilder(baseUrl: URL(string: Constants.Server.baseURL))
         Beagle.dependencies = dependencies
         
         BeagleConfig.registerWidgets()

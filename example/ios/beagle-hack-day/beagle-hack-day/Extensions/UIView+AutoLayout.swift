@@ -18,6 +18,7 @@
 import UIKit
 
 extension UIView {
+    
     func anchorTo(_ superview: UIView) {
         [topAnchor.constraint(equalTo: superview.topAnchor),
          leftAnchor.constraint(equalTo: superview.leftAnchor),
@@ -31,5 +32,6 @@ extension UIView {
          centerYAnchor.constraint(equalTo: view.centerYAnchor)
         ].forEach { $0.isActive = true}
     }
+    
 }
 

@@ -20,7 +20,6 @@ import Foundation
 struct Constants {
     
     enum Server {
-        
         static let baseURL = "http://localhost:8080"
         
         struct Path {
@@ -28,7 +27,6 @@ struct Constants {
             static let outfit = "/outfit"
             
         }
-        
     }
     
 }

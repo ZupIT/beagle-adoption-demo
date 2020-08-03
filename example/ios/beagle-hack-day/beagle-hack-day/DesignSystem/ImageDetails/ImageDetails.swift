@@ -19,6 +19,7 @@ import UIKit
 
 class ImageDetails: UIView {
     
+    //MARK: Views
     private lazy var label: UILabel = {
         let label = UILabel()
         label.text = value
@@ -45,6 +46,7 @@ class ImageDetails: UIView {
         return imageView
     }()
     
+    //MARK: Properties
     var value: String {
         didSet {
             label.text = value
@@ -53,6 +55,7 @@ class ImageDetails: UIView {
     
     let image: String
     
+    //MARK: Init
     init(value: String = String(), image: String) {
         self.value = value
         self.image = image

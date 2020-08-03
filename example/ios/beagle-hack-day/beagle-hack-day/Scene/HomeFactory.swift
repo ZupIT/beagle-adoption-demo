@@ -20,7 +20,7 @@ import UIKit
 class HomeFactory {
     
     private init() {}
-    
+
     static func makeController() -> UIViewController {
         let viewController = HomeViewController()
         let router = HomeRouter(viewController: viewController)

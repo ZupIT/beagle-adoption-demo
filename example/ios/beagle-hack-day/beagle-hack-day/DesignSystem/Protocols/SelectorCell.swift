@@ -15,11 +15,10 @@
  * limitations under the License.
  */
 
-import UIKit
+import Foundation
 
-extension UIImage {
+protocol SelectorCell {
     
-    static var dsCheck = UIImage(named: "ic_check")
-    static var dsQuestionMark = UIImage(named: "ic_question")
+    func setup(text: String, isSelected: Bool)
     
 }
