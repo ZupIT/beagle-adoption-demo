@@ -38,6 +38,7 @@ class SizeCell: UICollectionViewCell {
     
     //MARK: Reuse ID
     private(set) static var reuseId = String(describing: SizeCell.self)
+    
 }
 
 //MARK: - SelectorCell

@@ -18,7 +18,5 @@
 import Foundation
 
 protocol SelectorCell {
-    
     func setup(text: String, isSelected: Bool)
-    
 }

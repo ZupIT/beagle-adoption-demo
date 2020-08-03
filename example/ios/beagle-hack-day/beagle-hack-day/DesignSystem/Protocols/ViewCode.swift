@@ -18,12 +18,10 @@
 import UIKit
 
 protocol ViewCode {
-    
     func setup()
     func setupHierarchy()
     func setupConstraints()
     func additionalConfigurations()
-    
 }
 
 extension ViewCode where Self: UIView {

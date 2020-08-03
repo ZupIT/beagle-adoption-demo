@@ -26,6 +26,7 @@ class HomeView: UIView {
     
     private var delegate: HomeViewActionsDelegate?
     
+    //MARK: Views
     private lazy var beagleImage: UIImageView = {
         let image = UIImageView()
         image.image = UIImage(named: "beagle_logo")
@@ -40,7 +41,7 @@ class HomeView: UIView {
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
-
+    
     private lazy var previewButton: UIButton = {
         let button = UIButton()
         Styles.zupSecondaryButton()(button)
@@ -49,6 +50,7 @@ class HomeView: UIView {
         return button
     }()
     
+    //MARK: Init
     init(delegate: HomeViewActionsDelegate) {
         super.init(frame: .zero)
         self.delegate = delegate
@@ -71,11 +73,33 @@ extension HomeView: ViewCode {
     }
     
     func setupConstraints() {
-        beagleImage.anchor(top: safeAreaLayoutGuide.topAnchor, left: leftAnchor, right: rightAnchor, topConstant: 20, leftConstant: 20, rightConstant: 20)
+        beagleImage.anchor(
+            top: safeAreaLayoutGuide.topAnchor,
+            left: leftAnchor, right: rightAnchor,
+            topConstant: 20,
+            leftConstant: 20,
+            rightConstant: 20
+        )
         
-        livePreviewButton.anchor(top: beagleImage.bottomAnchor, left: leftAnchor, right: rightAnchor, topConstant: 100, leftConstant: 20, rightConstant: 20, heightConstant: 50)
+        livePreviewButton.anchor(
+            top: beagleImage.bottomAnchor,
+            left: leftAnchor,
+            right: rightAnchor,
+            topConstant: 100,
+            leftConstant: 20,
+            rightConstant: 20,
+            heightConstant: 50
+        )
         
-        previewButton.anchor(top: livePreviewButton.bottomAnchor, left: leftAnchor, right: rightAnchor, topConstant: 50, leftConstant: 20, rightConstant: 20, heightConstant: 50)
+        previewButton.anchor(
+            top: livePreviewButton.bottomAnchor,
+            left: leftAnchor,
+            right: rightAnchor,
+            topConstant: 50,
+            leftConstant: 20,
+            rightConstant: 20,
+            heightConstant: 50
+        )
     }
     
     func additionalConfigurations() {
@@ -87,9 +111,19 @@ extension HomeView: ViewCode {
 
 //MARK: - Actions
 extension HomeView {
+    
     private func setupActions() {
-        previewButton.addTarget(self, action: #selector(handleDemoButtonTap), for: .touchUpInside)
-        livePreviewButton.addTarget(self, action: #selector(handlePreviewButtonTap), for: .touchUpInside)
+        previewButton.addTarget(
+            self,
+            action: #selector(handleDemoButtonTap),
+            for: .touchUpInside
+        )
+        
+        livePreviewButton.addTarget(
+            self,
+            action: #selector(handlePreviewButtonTap),
+            for: .touchUpInside
+        )
     }
     
     @objc
@@ -101,4 +135,5 @@ extension HomeView {
     private func handleDemoButtonTap() {
         delegate?.demoButtonTapped()
     }
+    
 }

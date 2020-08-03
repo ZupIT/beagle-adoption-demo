@@ -65,4 +65,5 @@ class BeagleConfig {
         }
         dependencies.validatorProvider = provider
     }
+    
 }

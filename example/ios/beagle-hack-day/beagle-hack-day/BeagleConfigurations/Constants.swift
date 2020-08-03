@@ -19,7 +19,7 @@ import Foundation
 
 struct Constants {
     
-    struct Server {
+    enum Server {
         
         static let baseURL = "http://localhost:8080"
         
