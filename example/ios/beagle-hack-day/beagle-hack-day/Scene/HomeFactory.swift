@@ -15,35 +15,17 @@
  * limitations under the License.
  */
 
-import Beagle
+import UIKit
 
-class HomeViewController: UIViewController {
-        
-    var charlesManager: CharlesManaging = CharlesManager()
+class HomeFactory {
     
-    private var router: HomeRoutingLogic?
+    private init() {}
     
-    override func loadView() {
-        view = HomeView(delegate: self)
-    }
-    
-    func setup(router: HomeRoutingLogic?) {
-        self.router = router
+    static func makeController() -> UIViewController {
+        let viewController = HomeViewController()
+        let router = HomeRouter(viewController: viewController)
+        viewController.setup(router: router)
+        return viewController
     }
     
 }
-
-//MARK: - HomeViewActionsDelegate
-extension HomeViewController: HomeViewActionsDelegate {
-    
-    func demoButtonTapped() {
-        router?.routeToDemo()
-    }
-    
-    func previewButtonTapped() {
-        router?.routeToPreview()
-    }
-    
-}
-
-

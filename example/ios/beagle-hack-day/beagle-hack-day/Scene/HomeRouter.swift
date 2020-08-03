@@ -17,33 +17,30 @@
 
 import Beagle
 
-class HomeViewController: UIViewController {
-        
-    var charlesManager: CharlesManaging = CharlesManager()
+protocol HomeRoutingLogic {
+    func routeToDemo()
+    func routeToPreview()
+}
+
+class HomeRouter: HomeRoutingLogic {
+
+    private weak var viewController: UIViewController?
     
-    private var router: HomeRoutingLogic?
-    
-    override func loadView() {
-        view = HomeView(delegate: self)
+    init(viewController: UIViewController) {
+        self.viewController = viewController
     }
     
-    func setup(router: HomeRoutingLogic?) {
-        self.router = router
+    func routeToDemo() {
+        guard let vc = viewController else { return }
+        BeaglePreview.present(in: vc)
+    }
+    
+    func routeToPreview() {
+        guard let vc = viewController else { return }
+        let controller = BeagleScreenViewController(
+            .remote(.init(url: Constants.outfit))
+        )
+        vc.navigationController?.pushViewController(controller, animated: true)
     }
     
 }
-
-//MARK: - HomeViewActionsDelegate
-extension HomeViewController: HomeViewActionsDelegate {
-    
-    func demoButtonTapped() {
-        router?.routeToDemo()
-    }
-    
-    func previewButtonTapped() {
-        router?.routeToPreview()
-    }
-    
-}
-
-
