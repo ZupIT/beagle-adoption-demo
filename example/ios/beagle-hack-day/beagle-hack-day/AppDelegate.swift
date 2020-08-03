@@ -15,7 +15,6 @@
  * limitations under the License.
  */
 
-import UIKit
 import Beagle
 import BeagleSchema
 
@@ -40,4 +39,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         return true
     }
+    
 }
