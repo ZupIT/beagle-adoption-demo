@@ -15,7 +15,6 @@
  * limitations under the License.
  */
 
-import UIKit
 import Beagle
 
 class ScrollSelector: UIView {
@@ -68,6 +67,7 @@ class ScrollSelector: UIView {
     
     // MARK: Functions
     private func insertQuestionMarkIcon() {
+        questionMarkIcon.removeFromSuperview()
         addSubview(questionMarkIcon)
         [questionMarkIcon.heightAnchor.constraint(equalToConstant: 20),
          questionMarkIcon.widthAnchor.constraint(equalToConstant: 20),
@@ -125,8 +125,11 @@ extension ScrollSelector: UICollectionViewDelegateFlowLayout, UICollectionViewDa
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if selectedIndex == indexPath.row { return }
+        
         let previousIndex = selectedIndex
         selectedIndex = indexPath.row
+        
         collectionView.reloadItems(at: [IndexPath(row: previousIndex, section: indexPath.section), indexPath])
         collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
     }
