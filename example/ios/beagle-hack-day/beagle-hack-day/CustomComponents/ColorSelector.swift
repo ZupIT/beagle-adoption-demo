@@ -15,13 +15,14 @@
  * limitations under the License.
  */
 
-import UIKit
 import Beagle
 import BeagleSchema
 
 struct Color: AutoDecodable {
+    
     let hex: String
     let onPress: Action
+    
 }
 
 struct ColorSelector: Widget, AutoDecodable {
@@ -37,4 +38,5 @@ struct ColorSelector: Widget, AutoDecodable {
         }
         return view
     }
+    
 }

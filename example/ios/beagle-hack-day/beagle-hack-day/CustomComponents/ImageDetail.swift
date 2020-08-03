@@ -15,7 +15,6 @@
  * limitations under the License.
  */
 
-import UIKit
 import Beagle
 import BeagleSchema
 
@@ -31,4 +30,5 @@ struct ImageDetail: Widget, AutoDecodable {
         renderer.observe(value, andUpdate: \.value, in: view)
         return view
     }
+    
 }
