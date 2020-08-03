@@ -32,15 +32,15 @@ class HomeRouter: HomeRoutingLogic {
     
     func routeToDemo() {
         guard let vc = viewController else { return }
-        BeaglePreview.present(in: vc)
+        let controller = BeagleScreenViewController(
+            .remote(.init(url: Constants.Server.Path.outfit))
+        )
+        vc.navigationController?.pushViewController(controller, animated: true)
     }
     
     func routeToPreview() {
         guard let vc = viewController else { return }
-        let controller = BeagleScreenViewController(
-            .remote(.init(url: Constants.outfit))
-        )
-        vc.navigationController?.pushViewController(controller, animated: true)
+        BeaglePreview.present(in: vc)
     }
     
 }
