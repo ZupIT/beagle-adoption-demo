@@ -79,8 +79,8 @@ class OutfitScreen : ScreenBuilder {
     private fun screenWidgets(): Widget {
         return Container(
             context = ContextData(
-                id = "context",
-                value = ShirtData(shirtId = "123123", shirtPrice = "$23.99")
+                id = "shirtData",
+                value = ShirtData(id = "123123", price = "$23.99")
             ),
             children = listOf(
                 outfitImage(),
@@ -122,7 +122,7 @@ class OutfitScreen : ScreenBuilder {
     }
 
     private fun buildSetContextFor(value: String): SetContext {
-        return  SetContext("context", path = "shirtPrice", value = value)
+        return  SetContext("shirtData", path = "price", value = value)
     }
 
     private fun outfitColors(): Widget {
@@ -162,7 +162,7 @@ class OutfitScreen : ScreenBuilder {
                     Style(cornerRadius = CornerRadius(20.0))
                 ),
                 ImageDetail(
-                    value = expressionOf("@{context.shirtPrice}"),
+                    value = expressionOf("@{shirtData.price}"),
                     image = ImageType.RED_HEART
                 ).applyStyle(
                     Style(
@@ -190,6 +190,6 @@ class OutfitScreen : ScreenBuilder {
 }
 
 data class ShirtData(
-        val shirtId: String,
-        val shirtPrice: String
+        val id: String,
+        val price: String
 )

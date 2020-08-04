@@ -16,7 +16,7 @@ PODS:
 DEPENDENCIES:
   - Beagle
   - Beagle/Preview
-  - YogaKit (from `https://github.com/lucasaraujo/yoga.git`)
+  - YogaKit (from `https://github.com/ZupIT/YogaKit`)
 
 SPEC REPOS:
   trunk:
@@ -27,12 +27,12 @@ SPEC REPOS:
 
 EXTERNAL SOURCES:
   YogaKit:
-    :git: https://github.com/lucasaraujo/yoga.git
+    :git: https://github.com/ZupIT/YogaKit
 
 CHECKOUT OPTIONS:
   YogaKit:
-    :commit: 18c001c17865e77e56b70ff7ac7048deb5cbe56a
-    :git: https://github.com/lucasaraujo/yoga.git
+    :commit: 939ed55b23a687b91a378acfd80ca9e47bf1c000
+    :git: https://github.com/ZupIT/YogaKit
 
 SPEC CHECKSUMS:
   Beagle: 4c08b3b63abfcfcaadacfd7cb45363941dcca648
@@ -41,6 +41,6 @@ SPEC CHECKSUMS:
   Yoga: cff67a400f6b74dc38eb0bad4f156673d9aa980c
   YogaKit: 3a733275fd1639b96a304f6f5c11421478371e6b
 
-PODFILE CHECKSUM: 98900b69f3507adb48ffb46dc3281a23797b98f8
+PODFILE CHECKSUM: 64efda67d7dd6303397ac19da286cfe13b296c13
 
-COCOAPODS: 1.9.3
+COCOAPODS: 1.9.0

@@ -5,6 +5,6 @@ target 'beagle-hack-day' do
   use_frameworks!
   pod 'Beagle'
   pod 'Beagle/Preview'
-  pod 'YogaKit', :git => 'https://github.com/lucasaraujo/yoga.git'
+  pod 'YogaKit', :git => 'https://github.com/ZupIT/YogaKit'
 
 end
