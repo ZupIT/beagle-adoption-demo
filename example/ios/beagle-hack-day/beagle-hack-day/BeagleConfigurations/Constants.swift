@@ -31,4 +31,10 @@ struct Constants {
         
     }
     
+    enum CD {
+        
+        static let userName = ""
+        
+    }
+    
 }

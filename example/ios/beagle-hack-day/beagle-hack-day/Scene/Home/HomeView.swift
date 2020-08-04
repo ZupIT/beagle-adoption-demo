@@ -82,7 +82,7 @@ extension HomeView: ViewCode {
     func setupHierarchy() {
         stackView.addArrangedSubview(livePreviewButton)
         stackView.addArrangedSubview(demoButton)
-        stackView.addArrangedSubview(loginCDButton)
+
         addSubview(stackView)
     }
     

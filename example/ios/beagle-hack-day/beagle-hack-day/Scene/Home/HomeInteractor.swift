@@ -35,13 +35,13 @@ class HomeInteractor {
 extension HomeInteractor: HomeBusinessLogic {
     
     func loginCD() {
-        worker?.loginCD(with: "", completion: { [weak self] (result) in
+        worker?.loginCD(with: Constants.CD.userName, completion: { [weak self] (result) in
             guard let self = self else { return }
             switch result {
             case .success:
-                self.presenter?.presentLoginCDSuccess(response: .init(userName: ""))
+                self.presenter?.presentLoginCDSuccess(response: .init(userName: Constants.CD.userName))
             case .failure:
-                self.presenter?.presentLoginCDFailure(response: .init(userName: ""))
+                self.presenter?.presentLoginCDFailure(response: .init(userName: Constants.CD.userName))
             }
         })
     }
