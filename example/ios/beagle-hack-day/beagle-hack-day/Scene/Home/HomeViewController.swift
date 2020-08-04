@@ -58,7 +58,7 @@ extension HomeViewController: HomeViewActionsDelegate {
     }
     
     func loginCDButtonTapped() {
-        //TODO: interactor?.loginCD(userName: "")
+        //TODO: interactor?.loginCD()
     }
     
 }

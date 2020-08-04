@@ -18,7 +18,7 @@
 import Foundation
 
 protocol HomeBusinessLogic {
-    func loginCD(userName name: String)
+    func loginCD()
 }
 
 class HomeInteractor {
@@ -34,14 +34,14 @@ class HomeInteractor {
 //MARK: - HomeBusinessLogic
 extension HomeInteractor: HomeBusinessLogic {
     
-    func loginCD(userName name: String) {
-        worker?.loginCD(with: name, completion: { [weak self] (result) in
+    func loginCD() {
+        worker?.loginCD(with: "", completion: { [weak self] (result) in
             guard let self = self else { return }
             switch result {
             case .success:
-                self.presenter?.presentLoginCDSuccess(response: .init(userName: name))
+                self.presenter?.presentLoginCDSuccess(response: .init(userName: ""))
             case .failure:
-                self.presenter?.presentLoginCDFailure(response: .init(userName: name))
+                self.presenter?.presentLoginCDFailure(response: .init(userName: ""))
             }
         })
     }
