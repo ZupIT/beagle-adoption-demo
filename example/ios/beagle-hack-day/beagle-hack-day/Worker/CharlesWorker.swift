@@ -17,17 +17,18 @@
 
 import Foundation
 
-protocol CharlesManaging {
-    func login(with username: String, completion: @escaping (CharlesManagerResult) -> Void)
+protocol CharlesWorkLogic {
+    func login(with username: String, completion: @escaping (CharlesWorkerResult) -> Void)
 }
 
-enum CharlesManagerResult {
+enum CharlesWorkerResult {
     case success
     case failure(error: Error)
 }
 
-class CharlesManager: CharlesManaging {
-    func login(with username: String, completion: @escaping (CharlesManagerResult) -> Void) {
+class CharlesWorker: CharlesWorkLogic {
+
+    func login(with username: String, completion: @escaping (CharlesWorkerResult) -> Void) {
         struct Response: Decodable {
             let circles: [Circles]
             
@@ -75,4 +76,5 @@ class CharlesManager: CharlesManaging {
         
         return request
     }
+    
 }

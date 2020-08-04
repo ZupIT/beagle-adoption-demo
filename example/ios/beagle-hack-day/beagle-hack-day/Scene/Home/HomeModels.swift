@@ -20,9 +20,7 @@ import Foundation
 enum Home {
     
     enum LoginCD {
-        
-        struct Request {}
-        
+
         struct Response: Codable {
             
             let userName: String

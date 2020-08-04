@@ -41,7 +41,7 @@ class HomeViewController: UIViewController {
 extension HomeViewController: HomeDisplayLogic {
     
     func displayLoginCD(viewModel: Home.LoginCD.ViewModel) {
-        print(viewModel.message)
+        //TODO: display a visual feedback
     }
 
 }

@@ -36,7 +36,7 @@
 		7C5CC7AB247EE24700F787D4 /* ScrollSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5CC7AA247EE24600F787D4 /* ScrollSelector.swift */; };
 		7C5CC7AD247EEB6900F787D4 /* SizeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5CC7AC247EEB6900F787D4 /* SizeCell.swift */; };
 		7C5CC7AF247EF13900F787D4 /* SelectorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5CC7AE247EF13900F787D4 /* SelectorType.swift */; };
-		7CA127D0248EBE67009F2E97 /* CharlesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA127CF248EBE67009F2E97 /* CharlesManager.swift */; };
+		7CA127D0248EBE67009F2E97 /* CharlesWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA127CF248EBE67009F2E97 /* CharlesWorker.swift */; };
 		7CDDD03F24A4103E0028B07B /* UIColor+hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDDD03E24A4103E0028B07B /* UIColor+hex.swift */; };
 		7CF5921A24A6684F00FD311C /* ImageDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF5921924A6684F00FD311C /* ImageDetails.swift */; };
 /* End PBXBuildFile section */
@@ -74,7 +74,7 @@
 		7C5CC7AA247EE24600F787D4 /* ScrollSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollSelector.swift; sourceTree = "<group>"; };
 		7C5CC7AC247EEB6900F787D4 /* SizeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeCell.swift; sourceTree = "<group>"; };
 		7C5CC7AE247EF13900F787D4 /* SelectorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectorType.swift; sourceTree = "<group>"; };
-		7CA127CF248EBE67009F2E97 /* CharlesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharlesManager.swift; sourceTree = "<group>"; };
+		7CA127CF248EBE67009F2E97 /* CharlesWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharlesWorker.swift; sourceTree = "<group>"; };
 		7CDDD03E24A4103E0028B07B /* UIColor+hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+hex.swift"; sourceTree = "<group>"; };
 		7CF5921924A6684F00FD311C /* ImageDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetails.swift; sourceTree = "<group>"; };
 		B795AB865951846B0359023F /* Pods-beagle-hack-day.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-beagle-hack-day.release.xcconfig"; path = "Target Support Files/Pods-beagle-hack-day/Pods-beagle-hack-day.release.xcconfig"; sourceTree = "<group>"; };
@@ -103,14 +103,7 @@
 		42846B4D24D4C92C00B94DE3 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
-				7C5CC789247DBA2300F787D4 /* HomeViewController.swift */,
-				42846B4E24D4C95700B94DE3 /* HomeView.swift */,
-				42846B5324D4FB9E00B94DE3 /* HomeRouter.swift */,
-				42846B5524D500C500B94DE3 /* HomeFactory.swift */,
-				42303ACF24D8C738005ED66E /* HomeInteractor.swift */,
-				42303AD124D8C7E7005ED66E /* HomeWorker.swift */,
-				42303AD324D8CB7A005ED66E /* HomeModels.swift */,
-				42303AD524D8DC60005ED66E /* HomePresenter.swift */,
+				42D8B6AD24D9B28700BF3168 /* Home */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -122,6 +115,21 @@
 				42DF8E2124D88BD30027C544 /* SelectorCell.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		42D8B6AD24D9B28700BF3168 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				7C5CC789247DBA2300F787D4 /* HomeViewController.swift */,
+				42846B4E24D4C95700B94DE3 /* HomeView.swift */,
+				42846B5324D4FB9E00B94DE3 /* HomeRouter.swift */,
+				42846B5524D500C500B94DE3 /* HomeFactory.swift */,
+				42303ACF24D8C738005ED66E /* HomeInteractor.swift */,
+				42303AD124D8C7E7005ED66E /* HomeWorker.swift */,
+				42303AD324D8CB7A005ED66E /* HomeModels.swift */,
+				42303AD524D8DC60005ED66E /* HomePresenter.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		7C015B35248015EA00E5FF77 /* DesignSystem */ = {
@@ -175,7 +183,7 @@
 		7C5CC784247DBA2300F787D4 /* beagle-hack-day */ = {
 			isa = PBXGroup;
 			children = (
-				7CA127CE248EBE47009F2E97 /* CharlesManager */,
+				7CA127CE248EBE47009F2E97 /* Worker */,
 				7C015B4024818B7A00E5FF77 /* Generated */,
 				7C015B35248015EA00E5FF77 /* DesignSystem */,
 				7C5CC7A5247E9D6A00F787D4 /* Extensions */,
@@ -221,12 +229,12 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		7CA127CE248EBE47009F2E97 /* CharlesManager */ = {
+		7CA127CE248EBE47009F2E97 /* Worker */ = {
 			isa = PBXGroup;
 			children = (
-				7CA127CF248EBE67009F2E97 /* CharlesManager.swift */,
+				7CA127CF248EBE67009F2E97 /* CharlesWorker.swift */,
 			);
-			path = CharlesManager;
+			path = Worker;
 			sourceTree = "<group>";
 		};
 		7CF5921824A6683F00FD311C /* ImageDetails */ = {
@@ -386,7 +394,7 @@
 				42303AD624D8DC60005ED66E /* HomePresenter.swift in Sources */,
 				7C5CC78A247DBA2300F787D4 /* HomeViewController.swift in Sources */,
 				42846B5624D500C500B94DE3 /* HomeFactory.swift in Sources */,
-				7CA127D0248EBE67009F2E97 /* CharlesManager.swift in Sources */,
+				7CA127D0248EBE67009F2E97 /* CharlesWorker.swift in Sources */,
 				42303AD024D8C738005ED66E /* HomeInteractor.swift in Sources */,
 				7C5CC79A247DBC9700F787D4 /* BeagleConfig.swift in Sources */,
 				7C015B382480160D00E5FF77 /* SizeSelector.swift in Sources */,

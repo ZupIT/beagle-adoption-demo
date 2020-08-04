@@ -35,17 +35,17 @@ enum HomeWorkerResult {
 
 class HomeWorker: HomeWorkLogic {
     
-    private var cdManager: CharlesManaging?
+    private var cdWorker: CharlesWorkLogic?
     
-    init(cdManager: CharlesManaging = CharlesManager()) {
-        self.cdManager = cdManager
+    init(cdWorker: CharlesWorkLogic = CharlesWorker()) {
+        self.cdWorker = cdWorker
     }
     
     func loginCD(
         with username: String,
         completion: @escaping (HomeWorkerResult) -> Void
     ) {
-        cdManager?.login(with: username, completion: { (result) in
+        cdWorker?.login(with: username, completion: { (result) in
             switch result {
             case .success:
                 completion(.success)
