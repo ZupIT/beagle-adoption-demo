@@ -17,20 +17,33 @@
 
 import Beagle
 
+protocol HomeDisplayLogic {
+    func displayLoginCD(viewModel: Home.LoginCD.ViewModel)
+}
+
 class HomeViewController: UIViewController {
-        
-    var charlesManager: CharlesManaging = CharlesManager()
     
+    private var interactor: HomeBusinessLogic?
     private var router: HomeRoutingLogic?
     
     override func loadView() {
         view = HomeView(delegate: self)
     }
     
-    func setup(router: HomeRoutingLogic?) {
+    func setup(interactor: HomeBusinessLogic?, router: HomeRoutingLogic?) {
+        self.interactor = interactor
         self.router = router
     }
     
+}
+
+//MARK: - HomeDisplayLogic
+extension HomeViewController: HomeDisplayLogic {
+    
+    func displayLoginCD(viewModel: Home.LoginCD.ViewModel) {
+        print(viewModel.message)
+    }
+
 }
 
 //MARK: - HomeViewActionsDelegate

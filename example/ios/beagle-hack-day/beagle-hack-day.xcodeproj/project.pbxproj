@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		1499FA0D98A3B1AFD96DBEE8 /* Pods_beagle_hack_day.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C58B3F84F981C9AF1155B62 /* Pods_beagle_hack_day.framework */; };
+		42303AD024D8C738005ED66E /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42303ACF24D8C738005ED66E /* HomeInteractor.swift */; };
+		42303AD224D8C7E7005ED66E /* HomeWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42303AD124D8C7E7005ED66E /* HomeWorker.swift */; };
+		42303AD424D8CB7A005ED66E /* HomeModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42303AD324D8CB7A005ED66E /* HomeModels.swift */; };
+		42303AD624D8DC60005ED66E /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42303AD524D8DC60005ED66E /* HomePresenter.swift */; };
 		42846B4F24D4C95700B94DE3 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42846B4E24D4C95700B94DE3 /* HomeView.swift */; };
 		42846B5224D4CB6700B94DE3 /* ViewCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42846B5124D4CB6700B94DE3 /* ViewCode.swift */; };
 		42846B5424D4FB9E00B94DE3 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42846B5324D4FB9E00B94DE3 /* HomeRouter.swift */; };
@@ -40,6 +44,10 @@
 /* Begin PBXFileReference section */
 		3035FD087C10FA5EAA6793AC /* Pods-beagle-hack-day.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-beagle-hack-day.debug.xcconfig"; path = "Target Support Files/Pods-beagle-hack-day/Pods-beagle-hack-day.debug.xcconfig"; sourceTree = "<group>"; };
 		3C58B3F84F981C9AF1155B62 /* Pods_beagle_hack_day.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_beagle_hack_day.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		42303ACF24D8C738005ED66E /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		42303AD124D8C7E7005ED66E /* HomeWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWorker.swift; sourceTree = "<group>"; };
+		42303AD324D8CB7A005ED66E /* HomeModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModels.swift; sourceTree = "<group>"; };
+		42303AD524D8DC60005ED66E /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		42846B4E24D4C95700B94DE3 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		42846B5124D4CB6700B94DE3 /* ViewCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCode.swift; sourceTree = "<group>"; };
 		42846B5324D4FB9E00B94DE3 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
@@ -99,6 +107,10 @@
 				42846B4E24D4C95700B94DE3 /* HomeView.swift */,
 				42846B5324D4FB9E00B94DE3 /* HomeRouter.swift */,
 				42846B5524D500C500B94DE3 /* HomeFactory.swift */,
+				42303ACF24D8C738005ED66E /* HomeInteractor.swift */,
+				42303AD124D8C7E7005ED66E /* HomeWorker.swift */,
+				42303AD324D8CB7A005ED66E /* HomeModels.swift */,
+				42303AD524D8DC60005ED66E /* HomePresenter.swift */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -371,9 +383,11 @@
 				7C5CC7A7247E9D7F00F787D4 /* UIImage+Extension.swift in Sources */,
 				7CF5921A24A6684F00FD311C /* ImageDetails.swift in Sources */,
 				7C5CC79F247DBDF800F787D4 /* Constants.swift in Sources */,
+				42303AD624D8DC60005ED66E /* HomePresenter.swift in Sources */,
 				7C5CC78A247DBA2300F787D4 /* HomeViewController.swift in Sources */,
 				42846B5624D500C500B94DE3 /* HomeFactory.swift in Sources */,
 				7CA127D0248EBE67009F2E97 /* CharlesManager.swift in Sources */,
+				42303AD024D8C738005ED66E /* HomeInteractor.swift in Sources */,
 				7C5CC79A247DBC9700F787D4 /* BeagleConfig.swift in Sources */,
 				7C015B382480160D00E5FF77 /* SizeSelector.swift in Sources */,
 				7C5CC7AD247EEB6900F787D4 /* SizeCell.swift in Sources */,
@@ -385,6 +399,8 @@
 				7C015B3E248177E300E5FF77 /* ImageDetail.swift in Sources */,
 				7C5CC786247DBA2300F787D4 /* AppDelegate.swift in Sources */,
 				7C015B3C24815BDD00E5FF77 /* BackgroundView.swift in Sources */,
+				42303AD224D8C7E7005ED66E /* HomeWorker.swift in Sources */,
+				42303AD424D8CB7A005ED66E /* HomeModels.swift in Sources */,
 				42846B4F24D4C95700B94DE3 /* HomeView.swift in Sources */,
 				7C015B3A2480173D00E5FF77 /* ColorSelector.swift in Sources */,
 				7C5CC7A4247DC90600F787D4 /* ColorCell.swift in Sources */,

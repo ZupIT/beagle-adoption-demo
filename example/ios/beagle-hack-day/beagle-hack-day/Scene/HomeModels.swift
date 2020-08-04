@@ -15,21 +15,26 @@
  * limitations under the License.
  */
 
-import UIKit
+import Foundation
 
-class HomeFactory {
+enum Home {
     
-    private init() {}
-
-    static func makeController() -> UIViewController {
-        let viewController = HomeViewController()
-        let presenter = HomePresenter(viewController: viewController)
-        let worker = HomeWorker()
-        let interactor = HomeInteractor(worker: worker, presenter: presenter)
-        let router = HomeRouter(viewController: viewController)
+    enum LoginCD {
         
-        viewController.setup(interactor: interactor, router: router)
-        return viewController
+        struct Request {}
+        
+        struct Response: Codable {
+            
+            let userName: String
+            
+        }
+        
+        struct ViewModel {
+
+            let message: String
+            
+        }
+        
     }
     
 }
