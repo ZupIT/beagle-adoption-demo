@@ -22,10 +22,10 @@ protocol HomeBusinessLogic {
 }
 
 class HomeInteractor {
-    private var worker: HomeNetworkLogic?
+    private var worker: HomeWorkLogic?
     private var presenter: HomePresentationLogic?
     
-    init(worker: HomeNetworkLogic, presenter: HomePresentationLogic) {
+    init(worker: HomeWorkLogic, presenter: HomePresentationLogic) {
         self.worker = worker
         self.presenter = presenter
     }

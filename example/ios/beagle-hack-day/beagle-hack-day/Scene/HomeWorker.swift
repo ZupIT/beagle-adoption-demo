@@ -17,23 +17,23 @@
 
 import Foundation
 
-protocol HomeNetworkLogic {
+protocol HomeWorkLogic {
     func loginCD(
         with username: String,
-        completion: @escaping (HomeNetworkResult) -> Void
+        completion: @escaping (HomeWorkerResult) -> Void
     )
 }
 
-enum HomeNetworkError: Error {
+enum HomeWorkerError: Error {
     case loginCDFail
 }
 
-enum HomeNetworkResult {
+enum HomeWorkerResult {
     case success
-    case failure(error: HomeNetworkError)
+    case failure(error: HomeWorkerError)
 }
 
-class HomeWorker: HomeNetworkLogic {
+class HomeWorker: HomeWorkLogic {
     
     private var cdManager: CharlesManaging?
     
@@ -43,13 +43,13 @@ class HomeWorker: HomeNetworkLogic {
     
     func loginCD(
         with username: String,
-        completion: @escaping (HomeNetworkResult) -> Void
+        completion: @escaping (HomeWorkerResult) -> Void
     ) {
         cdManager?.login(with: username, completion: { (result) in
             switch result {
             case .success:
                 completion(.success)
-            case .failure(error: _):
+            case .failure:
                 completion(.failure(error: .loginCDFail))
             }
         })
