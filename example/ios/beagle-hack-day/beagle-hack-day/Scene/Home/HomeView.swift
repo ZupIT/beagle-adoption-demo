@@ -20,33 +20,46 @@ import Beagle
 protocol HomeViewActionsDelegate {
     func demoButtonTapped()
     func previewButtonTapped()
+    func loginCDButtonTapped()
 }
 
 class HomeView: UIView {
     
     private var delegate: HomeViewActionsDelegate?
     
-    //MARK: Views
-    private lazy var beagleImage: UIImageView = {
-        let image = UIImageView()
-        image.image = UIImage(named: "beagle_logo")
-        image.contentMode = .scaleAspectFit
-        return image
+    private lazy var stackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.axis = .vertical
+        stackView.distribution = .fillEqually
+        stackView.spacing = 20.0
+        return stackView
     }()
     
     private lazy var livePreviewButton: UIButton = {
         let button = UIButton()
         Styles.zupPrimaryButton()(button)
-        button.setTitle("Live Preview", for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle("live preview", for: .normal)
         return button
     }()
     
-    private lazy var previewButton: UIButton = {
+    private lazy var demoButton: UIButton = {
         let button = UIButton()
         Styles.zupSecondaryButton()(button)
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Demo", for: .normal)
+        button.setTitle("demo", for: .normal)
+        return button
+    }()
+    
+    private lazy var loginCDButton: UIButton = {
+        let button = UIButton()
+        button.isEnabled = false
+        
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle("Charles C.D.", for: .normal)
+        
+        button.setTitleColor(.gray, for: .disabled)
+        button.isEnabled ? Styles.zupPrimaryButton()(button) : Styles.disabledButton()(button)
         return button
     }()
     
@@ -67,38 +80,19 @@ class HomeView: UIView {
 //MARK: - ViewCode
 extension HomeView: ViewCode {
     func setupHierarchy() {
-        addSubview(beagleImage)
-        addSubview(livePreviewButton)
-        addSubview(previewButton)
+        stackView.addArrangedSubview(livePreviewButton)
+        stackView.addArrangedSubview(demoButton)
+        stackView.addArrangedSubview(loginCDButton)
+        addSubview(stackView)
     }
     
     func setupConstraints() {
-        beagleImage.anchor(
+        stackView.anchor(
             top: safeAreaLayoutGuide.topAnchor,
-            left: leftAnchor, right: rightAnchor,
-            topConstant: 20,
-            leftConstant: 20,
-            rightConstant: 20
-        )
-        
-        livePreviewButton.anchor(
-            top: beagleImage.bottomAnchor,
             left: leftAnchor,
+            bottom: safeAreaLayoutGuide.bottomAnchor,
             right: rightAnchor,
-            topConstant: 100,
-            leftConstant: 20,
-            rightConstant: 20,
-            heightConstant: 50
-        )
-        
-        previewButton.anchor(
-            top: livePreviewButton.bottomAnchor,
-            left: leftAnchor,
-            right: rightAnchor,
-            topConstant: 50,
-            leftConstant: 20,
-            rightConstant: 20,
-            heightConstant: 50
+            heightConstant: UIScreen.main.bounds.height
         )
     }
     
@@ -113,7 +107,7 @@ extension HomeView: ViewCode {
 extension HomeView {
     
     private func setupActions() {
-        previewButton.addTarget(
+        demoButton.addTarget(
             self,
             action: #selector(handleDemoButtonTap),
             for: .touchUpInside
@@ -124,6 +118,17 @@ extension HomeView {
             action: #selector(handlePreviewButtonTap),
             for: .touchUpInside
         )
+        
+        loginCDButton.addTarget(
+            self,
+            action: #selector(handleLoginCDButtonTap),
+            for: .touchUpInside
+        )
+    }
+    
+    @objc
+    private func handleDemoButtonTap() {
+        delegate?.demoButtonTapped()
     }
     
     @objc
@@ -132,8 +137,8 @@ extension HomeView {
     }
     
     @objc
-    private func handleDemoButtonTap() {
-        delegate?.demoButtonTapped()
+    private func handleLoginCDButtonTap() {
+        delegate?.loginCDButtonTapped()
     }
     
 }

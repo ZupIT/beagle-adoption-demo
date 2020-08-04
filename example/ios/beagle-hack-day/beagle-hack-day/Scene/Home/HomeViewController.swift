@@ -48,13 +48,17 @@ extension HomeViewController: HomeDisplayLogic {
 
 //MARK: - HomeViewActionsDelegate
 extension HomeViewController: HomeViewActionsDelegate {
-    
+
     func demoButtonTapped() {
         router?.routeToDemo()
     }
     
     func previewButtonTapped() {
         router?.routeToPreview()
+    }
+    
+    func loginCDButtonTapped() {
+        //TODO: interactor?.loginCD(userName: "")
     }
     
 }
