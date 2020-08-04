@@ -12,8 +12,7 @@
 		7C015B3A2480173D00E5FF77 /* ColorSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C015B392480173D00E5FF77 /* ColorSelector.swift */; };
 		7C015B3C24815BDD00E5FF77 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C015B3B24815BDD00E5FF77 /* BackgroundView.swift */; };
 		7C015B3E248177E300E5FF77 /* ImageDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C015B3D248177E300E5FF77 /* ImageDetail.swift */; };
-		7C015B4324818B7A00E5FF77 /* Equality.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C015B4124818B7A00E5FF77 /* Equality.generated.swift */; };
-		7C015B4424818B7A00E5FF77 /* AutoDecodable.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C015B4224818B7A00E5FF77 /* AutoDecodable.generated.swift */; };
+		7C015B4424818B7A00E5FF77 /* Components+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C015B4224818B7A00E5FF77 /* Components+Decodable.swift */; };
 		7C5CC786247DBA2300F787D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5CC785247DBA2300F787D4 /* AppDelegate.swift */; };
 		7C5CC78A247DBA2300F787D4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5CC789247DBA2300F787D4 /* ViewController.swift */; };
 		7C5CC78F247DBA2800F787D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C5CC78E247DBA2800F787D4 /* Assets.xcassets */; };
@@ -39,8 +38,7 @@
 		7C015B392480173D00E5FF77 /* ColorSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSelector.swift; sourceTree = "<group>"; };
 		7C015B3B24815BDD00E5FF77 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		7C015B3D248177E300E5FF77 /* ImageDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetail.swift; sourceTree = "<group>"; };
-		7C015B4124818B7A00E5FF77 /* Equality.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Equality.generated.swift; sourceTree = "<group>"; };
-		7C015B4224818B7A00E5FF77 /* AutoDecodable.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoDecodable.generated.swift; sourceTree = "<group>"; };
+		7C015B4224818B7A00E5FF77 /* Components+Decodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Components+Decodable.swift"; sourceTree = "<group>"; };
 		7C5CC782247DBA2300F787D4 /* beagle-hack-day.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "beagle-hack-day.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C5CC785247DBA2300F787D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7C5CC789247DBA2300F787D4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -102,15 +100,6 @@
 			path = ScrollSelector;
 			sourceTree = "<group>";
 		};
-		7C015B4024818B7A00E5FF77 /* Generated */ = {
-			isa = PBXGroup;
-			children = (
-				7C015B4124818B7A00E5FF77 /* Equality.generated.swift */,
-				7C015B4224818B7A00E5FF77 /* AutoDecodable.generated.swift */,
-			);
-			path = Generated;
-			sourceTree = "<group>";
-		};
 		7C5CC779247DBA2300F787D4 = {
 			isa = PBXGroup;
 			children = (
@@ -133,7 +122,6 @@
 			isa = PBXGroup;
 			children = (
 				7CA127CE248EBE47009F2E97 /* CharlesManager */,
-				7C015B4024818B7A00E5FF77 /* Generated */,
 				7C015B35248015EA00E5FF77 /* DesignSystem */,
 				7C5CC7A5247E9D6A00F787D4 /* Extensions */,
 				7C5CC7A2247DC8F100F787D4 /* CustomComponents */,
@@ -161,6 +149,7 @@
 		7C5CC7A2247DC8F100F787D4 /* CustomComponents */ = {
 			isa = PBXGroup;
 			children = (
+				7C015B4224818B7A00E5FF77 /* Components+Decodable.swift */,
 				7C015B372480160D00E5FF77 /* SizeSelector.swift */,
 				7C015B392480173D00E5FF77 /* ColorSelector.swift */,
 				7C015B3D248177E300E5FF77 /* ImageDetail.swift */,
@@ -211,7 +200,6 @@
 			buildConfigurationList = 7C5CC796247DBA2800F787D4 /* Build configuration list for PBXNativeTarget "beagle-hack-day" */;
 			buildPhases = (
 				C4C610F9110AE09175BFDB5A /* [CP] Check Pods Manifest.lock */,
-				7C015B3F248189D600E5FF77 /* Sourcery */,
 				7C5CC77E247DBA2300F787D4 /* Sources */,
 				7C5CC77F247DBA2300F787D4 /* Frameworks */,
 				7C5CC780247DBA2300F787D4 /* Resources */,
@@ -289,24 +277,6 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-beagle-hack-day/Pods-beagle-hack-day-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7C015B3F248189D600E5FF77 /* Sourcery */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = Sourcery;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "sourcery --config $SRCROOT\n\n";
-		};
 		C4C610F9110AE09175BFDB5A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -346,7 +316,7 @@
 				7C015B382480160D00E5FF77 /* SizeSelector.swift in Sources */,
 				7C5CC7AD247EEB6900F787D4 /* SizeCell.swift in Sources */,
 				7C5CC7A9247E9E4500F787D4 /* UIView+AutoLayout.swift in Sources */,
-				7C015B4424818B7A00E5FF77 /* AutoDecodable.generated.swift in Sources */,
+				7C015B4424818B7A00E5FF77 /* Components+Decodable.swift in Sources */,
 				7C5CC7AB247EE24700F787D4 /* ScrollSelector.swift in Sources */,
 				7C015B3E248177E300E5FF77 /* ImageDetail.swift in Sources */,
 				7C5CC786247DBA2300F787D4 /* AppDelegate.swift in Sources */,
@@ -354,7 +324,6 @@
 				7C015B3A2480173D00E5FF77 /* ColorSelector.swift in Sources */,
 				7C5CC7A4247DC90600F787D4 /* ColorCell.swift in Sources */,
 				7CDDD03F24A4103E0028B07B /* UIColor+hex.swift in Sources */,
-				7C015B4324818B7A00E5FF77 /* Equality.generated.swift in Sources */,
 				7C5CC79D247DBD8500F787D4 /* Styles.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
