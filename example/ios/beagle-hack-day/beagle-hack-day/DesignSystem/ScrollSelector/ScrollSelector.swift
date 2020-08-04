@@ -36,7 +36,7 @@ class ScrollSelector: UIView {
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.image = UIImage.dsQuestionMark
         imageView.tintColor = .lightGray
-        return UIImageView()
+        return imageView
     }()
     
     // MARK: Properties
@@ -69,6 +69,7 @@ class ScrollSelector: UIView {
     private func insertQuestionMarkIcon() {
         questionMarkIcon.removeFromSuperview()
         addSubview(questionMarkIcon)
+        
         [questionMarkIcon.heightAnchor.constraint(equalToConstant: 20),
          questionMarkIcon.widthAnchor.constraint(equalToConstant: 20),
          questionMarkIcon.leftAnchor.constraint(equalTo: label.rightAnchor, constant: 10),
@@ -154,15 +155,15 @@ extension ScrollSelector: ViewCode {
         [label.leftAnchor.constraint(equalTo: leftAnchor),
          label.centerYAnchor.constraint(equalTo: centerYAnchor)
         ].forEach { $0.isActive = true }
+        
+        if case SelectorType.size = type {
+            insertQuestionMarkIcon()
+        }
     }
     
     func additionalConfigurations() {
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         label.translatesAutoresizingMaskIntoConstraints = false
-        
-        if case SelectorType.size = type {
-            insertQuestionMarkIcon()
-        }
         
         registerCells()
         collectionView.reloadData()
