@@ -18,23 +18,15 @@
 import Foundation
 
 struct Constants {
-    
     enum Server {
-        
         static let baseURL = "http://localhost:8080"
         
         struct Path {
-            
             static let outfit = "/outfit"
-            
         }
-        
     }
     
     enum CD {
-        
         static let userName = ""
-        
     }
-    
 }

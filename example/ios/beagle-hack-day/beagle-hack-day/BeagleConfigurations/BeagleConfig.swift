@@ -18,7 +18,6 @@
 import Beagle
 
 class BeagleConfig {
-    
     static let dependencies = BeagleDependencies()
     static let client = NetworkClientDefault(dependencies: dependencies)
     
@@ -65,5 +64,4 @@ class BeagleConfig {
         }
         dependencies.validatorProvider = provider
     }
-    
 }

@@ -18,7 +18,6 @@
 import Beagle
 
 class Styles {
-    
     static func h1() -> (UILabel?) -> Void {
         BeagleStyle.label(withFont: .systemFont(ofSize: 24))
     }
@@ -103,5 +102,4 @@ class Styles {
             gradient.isAccessibilityElement = false
         }
     }
-    
 }
