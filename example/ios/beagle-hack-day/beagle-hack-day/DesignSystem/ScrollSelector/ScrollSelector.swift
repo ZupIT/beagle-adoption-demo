@@ -18,7 +18,6 @@
 import Beagle
 
 class ScrollSelector: UIView {
-
     // MARK: Views
     private lazy var collectionView: UICollectionView = {
         return makeCollectionView()
@@ -76,21 +75,17 @@ class ScrollSelector: UIView {
          questionMarkIcon.centerYAnchor.constraint(equalTo: centerYAnchor)
         ].forEach { $0.isActive = true }
     }
-    
 }
 
 //MARK: Beagle InputValue
 extension ScrollSelector: InputValue {
-    
     func getValue() -> Any {
         type.getSelectedValue(index: selectedIndex)
     }
-    
 }
 
 //MARK: - UICollectionViewDelegateFlowLayout, UICollectionViewDataSource
 extension ScrollSelector: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
-    
     private func makeCollectionView() -> UICollectionView {
         let collectionView = UICollectionView(frame: .zero,
                                               collectionViewLayout: makeCollectionViewFlowLayout())
@@ -134,12 +129,10 @@ extension ScrollSelector: UICollectionViewDelegateFlowLayout, UICollectionViewDa
         collectionView.reloadItems(at: [IndexPath(row: previousIndex, section: indexPath.section), indexPath])
         collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
     }
-    
 }
 
 //MARK: - ViewCode
 extension ScrollSelector: ViewCode {
-    
     func setupHierarchy() {
         addSubview(label)
         addSubview(collectionView)
@@ -168,6 +161,5 @@ extension ScrollSelector: ViewCode {
         registerCells()
         collectionView.reloadData()
     }
-    
 }
 

@@ -18,7 +18,6 @@
 import Foundation
 
 enum SelectorType {
-    
     case color(colors: [String])
     case size(sizes: [String])
     
@@ -52,5 +51,4 @@ enum SelectorType {
     func getSelectedValue(index: Int) -> String {
         itens()[index]
     }
-    
 }

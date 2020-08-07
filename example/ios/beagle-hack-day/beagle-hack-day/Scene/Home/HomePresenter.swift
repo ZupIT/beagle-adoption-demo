@@ -23,7 +23,6 @@ protocol HomePresentationLogic {
 }
 
 class HomePresenter: HomePresentationLogic {
-
     private var viewController: HomeDisplayLogic?
 
     init(viewController: HomeDisplayLogic) {
@@ -49,5 +48,4 @@ class HomePresenter: HomePresentationLogic {
             )
         )
     }
-    
 }

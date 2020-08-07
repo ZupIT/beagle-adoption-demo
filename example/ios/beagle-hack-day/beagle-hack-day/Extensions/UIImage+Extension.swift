@@ -18,8 +18,6 @@
 import UIKit
 
 extension UIImage {
-    
     static var dsCheck = UIImage(named: "ic_check")
     static var dsQuestionMark = UIImage(named: "ic_question")
-    
 }

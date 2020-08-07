@@ -18,7 +18,6 @@
 import UIKit
 
 class SizeCell: UICollectionViewCell {
-    
     //MARK: Views
     private lazy var sizeLabel: UILabel = {
         let view = UILabel()
@@ -38,12 +37,10 @@ class SizeCell: UICollectionViewCell {
     
     //MARK: Reuse ID
     private(set) static var reuseId = String(describing: SizeCell.self)
-    
 }
 
 //MARK: - SelectorCell
 extension SizeCell: SelectorCell {
-    
     func setup(text: String, isSelected: Bool) {
         handleSelection(isSelected: isSelected)
         sizeLabel.text = text
@@ -52,12 +49,10 @@ extension SizeCell: SelectorCell {
     private func handleSelection(isSelected: Bool) {
         backgroundColor = isSelected ? .lightGray : .clear
     }
-    
 }
 
 //MARK: - ViewCode
 extension SizeCell: ViewCode {
-    
     func setupHierarchy() {
         addSubview(sizeLabel)
     }
@@ -71,5 +66,4 @@ extension SizeCell: ViewCode {
         clipsToBounds = true
         layer.cornerRadius = 20
     }
-    
 }

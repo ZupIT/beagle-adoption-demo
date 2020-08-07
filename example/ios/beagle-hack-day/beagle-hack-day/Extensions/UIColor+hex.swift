@@ -18,7 +18,6 @@
 import UIKit
 
 extension UIColor {
-    
     /// Create a color from hex String.
     /// Format:  #RRGGBB[AA] or #RGB[A]
     convenience init?(hex: String) {
@@ -58,5 +57,4 @@ extension UIColor {
     private static func expand(shortColor: UInt64) -> UInt64 {
         return shortColor | (shortColor << 4)
     }
-    
 }

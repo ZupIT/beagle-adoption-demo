@@ -22,7 +22,6 @@ protocol HomeDisplayLogic {
 }
 
 class HomeViewController: UIViewController {
-    
     private var interactor: HomeBusinessLogic?
     private var router: HomeRoutingLogic?
     
@@ -34,21 +33,17 @@ class HomeViewController: UIViewController {
         self.interactor = interactor
         self.router = router
     }
-    
 }
 
 //MARK: - HomeDisplayLogic
 extension HomeViewController: HomeDisplayLogic {
-    
     func displayLoginCD(viewModel: Home.LoginCD.ViewModel) {
         //TODO: display a visual feedback
     }
-
 }
 
 //MARK: - HomeViewActionsDelegate
 extension HomeViewController: HomeViewActionsDelegate {
-
     func demoButtonTapped() {
         router?.routeToDemo()
     }
@@ -60,7 +55,6 @@ extension HomeViewController: HomeViewActionsDelegate {
     func loginCDButtonTapped() {
         //TODO: interactor?.loginCD()
     }
-    
 }
 
 

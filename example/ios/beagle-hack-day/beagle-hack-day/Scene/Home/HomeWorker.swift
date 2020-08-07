@@ -34,7 +34,6 @@ enum HomeWorkerResult {
 }
 
 class HomeWorker: HomeWorkLogic {
-    
     private var cdWorker: CharlesWorkLogic?
     
     init(cdWorker: CharlesWorkLogic = CharlesWorker()) {
@@ -54,5 +53,4 @@ class HomeWorker: HomeWorkLogic {
             }
         })
     }
-
 }

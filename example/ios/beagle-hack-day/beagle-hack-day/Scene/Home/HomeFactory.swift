@@ -18,7 +18,6 @@
 import UIKit
 
 class HomeFactory {
-    
     private init() {}
 
     static func makeController() -> UIViewController {
@@ -31,5 +30,4 @@ class HomeFactory {
         viewController.setup(interactor: interactor, router: router)
         return viewController
     }
-    
 }

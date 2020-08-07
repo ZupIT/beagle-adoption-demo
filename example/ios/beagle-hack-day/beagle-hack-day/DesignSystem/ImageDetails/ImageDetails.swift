@@ -18,7 +18,6 @@
 import UIKit
 
 class ImageDetails: UIView {
-    
     //MARK: Views
     private lazy var label: UILabel = {
         let label = UILabel()
@@ -71,12 +70,10 @@ class ImageDetails: UIView {
     override func sizeThatFits(_ size: CGSize) -> CGSize {
         .init(width: size.width, height: 40)
     }
-    
 }
 
 //MARK: - ViewCode
 extension ImageDetails: ViewCode {
-    
     func setupHierarchy() {
         addSubview(label)
         addSubview(circleView)
@@ -91,5 +88,4 @@ extension ImageDetails: ViewCode {
         heartView.anchor(widthConstant: 10, heightConstant: 10)
         heartView.anchorCenterSuperview()
     }
-    
 }

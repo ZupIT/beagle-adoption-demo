@@ -33,7 +33,6 @@ class HomeInteractor {
 
 //MARK: - HomeBusinessLogic
 extension HomeInteractor: HomeBusinessLogic {
-    
     func loginCD() {
         worker?.loginCD(with: Constants.CD.userName, completion: { [weak self] (result) in
             guard let self = self else { return }
@@ -45,5 +44,4 @@ extension HomeInteractor: HomeBusinessLogic {
             }
         })
     }
-    
 }

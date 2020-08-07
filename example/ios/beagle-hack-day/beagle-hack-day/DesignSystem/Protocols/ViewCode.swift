@@ -25,7 +25,6 @@ protocol ViewCode {
 }
 
 extension ViewCode where Self: UIView {
-    
     func setup() {
         setupHierarchy()
         setupConstraints()
@@ -33,5 +32,4 @@ extension ViewCode where Self: UIView {
     }
     
     func additionalConfigurations() {}
-    
 }

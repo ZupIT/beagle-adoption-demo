@@ -19,16 +19,12 @@ import Beagle
 import BeagleSchema
 
 struct Color: AutoDecodable {
-    
     let hex: String
     let onPress: Action
-    
 }
 
 struct ColorSelector: Widget, AutoDecodable {
-    
     var widgetProperties: WidgetProperties
-    
     var colors: [Color]
     
     func toView(renderer: BeagleRenderer) -> UIView {
@@ -38,5 +34,4 @@ struct ColorSelector: Widget, AutoDecodable {
         }
         return view
     }
-    
 }

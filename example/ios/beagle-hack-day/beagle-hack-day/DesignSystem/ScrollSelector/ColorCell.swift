@@ -18,7 +18,6 @@
 import UIKit
 
 class ColorCell: UICollectionViewCell {
-    
     //MARK: Views
     private lazy var selectedImage: UIImageView = {
         let view = UIImageView()
@@ -45,7 +44,6 @@ class ColorCell: UICollectionViewCell {
 
 //MARK: - SelectorCell
 extension ColorCell: SelectorCell {
-    
     func setup(text: String, isSelected: Bool) {
         handleSelection(color: text, isSelected: isSelected)
     }
@@ -55,12 +53,10 @@ extension ColorCell: SelectorCell {
         selectedImage.isHidden = !isSelected
         layer.borderColor = UIColor(hex: color)?.cgColor
     }
-    
 }
 
 //MARK: - ViewCode
 extension ColorCell: ViewCode {
-    
     func setupHierarchy() {
         addSubview(selectedImage)
     }
@@ -77,5 +73,4 @@ extension ColorCell: ViewCode {
         layer.cornerRadius = 20
         layer.borderWidth = 2
     }
-    
 }

@@ -23,7 +23,6 @@ protocol HomeRoutingLogic {
 }
 
 class HomeRouter: HomeRoutingLogic {
-
     private weak var viewController: UIViewController?
     
     init(viewController: UIViewController) {
@@ -42,5 +41,4 @@ class HomeRouter: HomeRoutingLogic {
         guard let vc = viewController else { return }
         BeaglePreview.present(in: vc)
     }
-    
 }

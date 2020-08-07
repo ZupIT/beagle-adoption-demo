@@ -19,7 +19,6 @@ import Beagle
 import BeagleSchema
 
 struct SizeSelector: Widget, AutoDecodable {
-    
     var widgetProperties: WidgetProperties
     
     var sizes: [String]
@@ -28,6 +27,5 @@ struct SizeSelector: Widget, AutoDecodable {
         let view = ScrollSelector(selectorType: .size(sizes: sizes))
         return view
     }
-    
 }
 

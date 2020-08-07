@@ -19,9 +19,7 @@ import Beagle
 import BeagleSchema
 
 struct ImageDetail: Widget, AutoDecodable {
-    
     var widgetProperties: WidgetProperties
-    
     var value: Expression<String>
     var image: String
     
@@ -30,5 +28,4 @@ struct ImageDetail: Widget, AutoDecodable {
         renderer.observe(value, andUpdate: \.value, in: view)
         return view
     }
-    
 }

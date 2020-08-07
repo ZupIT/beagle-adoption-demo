@@ -27,7 +27,6 @@ enum CharlesWorkerResult {
 }
 
 class CharlesWorker: CharlesWorkLogic {
-
     func login(with username: String, completion: @escaping (CharlesWorkerResult) -> Void) {
         struct Response: Decodable {
             let circles: [Circles]
@@ -76,5 +75,4 @@ class CharlesWorker: CharlesWorkLogic {
         
         return request
     }
-    
 }
