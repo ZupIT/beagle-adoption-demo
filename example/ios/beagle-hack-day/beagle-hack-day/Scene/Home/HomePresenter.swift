@@ -23,7 +23,7 @@ protocol HomePresentationLogic {
 }
 
 class HomePresenter: HomePresentationLogic {
-    private var viewController: HomeDisplayLogic?
+    private weak var viewController: HomeDisplayLogic?
 
     init(viewController: HomeDisplayLogic) {
         self.viewController = viewController

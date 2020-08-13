@@ -17,14 +17,14 @@
 
 import Beagle
 
-protocol HomeViewActionsDelegate {
+protocol HomeViewActionsDelegate: AnyObject {
     func demoButtonTapped()
     func previewButtonTapped()
     func loginCDButtonTapped()
 }
 
 class HomeView: UIView {
-    private var delegate: HomeViewActionsDelegate?
+    private weak var delegate: HomeViewActionsDelegate?
     
     //MARK: Views
     private lazy var stackView: UIStackView = {

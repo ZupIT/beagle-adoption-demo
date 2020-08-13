@@ -17,7 +17,7 @@
 
 import Beagle
 
-protocol HomeDisplayLogic {
+protocol HomeDisplayLogic: AnyObject {
     func displayLoginCD(viewModel: Home.LoginCD.ViewModel)
 }
 
