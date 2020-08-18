@@ -17,9 +17,7 @@
 
 import UIKit
 
-class HomeFactory {
-    private init() {}
-
+struct HomeFactory {
     static func makeController() -> UIViewController {
         let viewController = HomeViewController()
         let presenter = HomePresenter(viewController: viewController)
