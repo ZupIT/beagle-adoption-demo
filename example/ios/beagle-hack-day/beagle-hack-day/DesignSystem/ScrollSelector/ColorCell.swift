@@ -17,12 +17,8 @@
 
 import UIKit
 
-//MARK: - ColorCell
-
-class ColorCell: UICollectionViewCell, SelectorCell {
-    
-    //MARK: View
-    
+class ColorCell: UICollectionViewCell {
+    //MARK: Views
     private lazy var selectedImage: UIImageView = {
         let view = UIImageView()
         view.image = UIImage.dsCheck
@@ -31,23 +27,24 @@ class ColorCell: UICollectionViewCell, SelectorCell {
         return view
     }()
     
+    //MARK: Init
     override init(frame: CGRect) {
         super.init(frame: frame)
-        buildViewLayout()
-        setupViewLayer()
+        setup()
     }
     
+    @available(*, unavailable)
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    //MARK: Reuse Id
-
+    //MARK: Reuse ID
     static let reuseId = String(describing: ColorCell.self)
-    
-    //MARK: Functions
-    
-    func setupCell(text: String, isSelected: Bool) {
+}
+
+//MARK: - SelectorCell
+extension ColorCell: SelectorCell {
+    func setup(text: String, isSelected: Bool) {
         handleSelection(color: text, isSelected: isSelected)
     }
     
@@ -56,16 +53,22 @@ class ColorCell: UICollectionViewCell, SelectorCell {
         selectedImage.isHidden = !isSelected
         layer.borderColor = UIColor(hex: color)?.cgColor
     }
-    
-    private func buildViewLayout() {
+}
+
+//MARK: - ViewCode
+extension ColorCell: ViewCode {
+    func setupHierarchy() {
         addSubview(selectedImage)
+    }
+    
+    func setupConstraints() {
         selectedImage.translatesAutoresizingMaskIntoConstraints = false
         selectedImage.widthAnchor.constraint(equalToConstant: 10).isActive = true
         selectedImage.heightAnchor.constraint(equalToConstant: 10).isActive = true
         selectedImage.centerTo(self)
     }
     
-    private func setupViewLayer() {
+    func additionalConfigurations() {
         clipsToBounds = true
         layer.cornerRadius = 20
         layer.borderWidth = 2

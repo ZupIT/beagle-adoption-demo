@@ -22,7 +22,6 @@ import Beagle
 
 // MARK: Color Decodable
 extension Color {
-
     enum CodingKeys: String, CodingKey {
         case hex
         case onPress
@@ -38,7 +37,6 @@ extension Color {
 
 // MARK: ColorSelector Decodable
 extension ColorSelector {
-
     enum CodingKeys: String, CodingKey {
         case colors
     }
@@ -53,7 +51,6 @@ extension ColorSelector {
 
 // MARK: ImageDetail Decodable
 extension ImageDetail {
-
     enum CodingKeys: String, CodingKey {
         case value
         case image
@@ -70,7 +67,6 @@ extension ImageDetail {
 
 // MARK: SizeSelector Decodable
 extension SizeSelector {
-
     enum CodingKeys: String, CodingKey {
         case sizes
     }

@@ -15,11 +15,9 @@
  * limitations under the License.
  */
 
-import Foundation
 import Beagle
 
 class Styles {
-    
     static func h1() -> (UILabel?) -> Void {
         BeagleStyle.label(withFont: .systemFont(ofSize: 24))
     }
@@ -54,20 +52,29 @@ class Styles {
     }
     
     static func zupPrimaryButton() -> (UIButton?) -> Void {
-        gradientBackground(colors: [#colorLiteral(red: 0.5985979438, green: 0.7665129304, blue: 0.34283638, alpha: 1),#colorLiteral(red: 0.397660166, green: 0.7198082805, blue: 0.5657112598, alpha: 1)], direction: .horizontal, corner: .pill)
+        gradientBackground(colors: [#colorLiteral(red: 0.5985979438, green: 0.7665129304, blue: 0.34283638, alpha: 1),#colorLiteral(red: 0.397660166, green: 0.7198082805, blue: 0.5657112598, alpha: 1)], direction: .horizontal, corner: .radius(value: .zero))
         <> BeagleStyle.button(withTitleColor: .white)
             <> {
                 $0?.tintColor = .white
-                Styles.h2()($0?.titleLabel)
+                Styles.h1()($0?.titleLabel)
         }
     }
     
     static func zupSecondaryButton() -> (UIButton?) -> Void {
-        gradientBackground(colors: [#colorLiteral(red: 0.8709219694, green: 0.3171179891, blue: 0.20386675, alpha: 1),#colorLiteral(red: 0.9195727706, green: 0.5976730585, blue: 0.2411729395, alpha: 1)], direction: .horizontal, corner: .pill)
+        gradientBackground(colors: [#colorLiteral(red: 0.8709219694, green: 0.3171179891, blue: 0.20386675, alpha: 1),#colorLiteral(red: 0.9195727706, green: 0.5976730585, blue: 0.2411729395, alpha: 1)], direction: .horizontal, corner: .radius(value: .zero))
         <> BeagleStyle.button(withTitleColor: .white)
             <> {
                 $0?.tintColor = .white
-                Styles.h2()($0?.titleLabel)
+                Styles.h1()($0?.titleLabel)
+        }
+    }
+    
+    static func disabledButton() -> (UIButton?) -> Void {
+        gradientBackground(colors: [#colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1),#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)], direction: .horizontal, corner: .radius(value: .zero))
+        <> BeagleStyle.button(withTitleColor: .white)
+            <> {
+                $0?.tintColor = .white
+                Styles.h1()($0?.titleLabel)
         }
     }
     

@@ -15,19 +15,16 @@
  * limitations under the License.
  */
 
-import UIKit
 import Beagle
 import BeagleSchema
 
 struct ImageDetail: Widget, AutoDecodable {
-    
     var widgetProperties: WidgetProperties
-    
     var value: Expression<String>
     var image: String
     
     func toView(renderer: BeagleRenderer) -> UIView {
-        let view = ImageDetailsUIComponent(image: image)
+        let view = ImageDetails(image: image)
         renderer.observe(value, andUpdate: \.value, in: view)
         return view
     }

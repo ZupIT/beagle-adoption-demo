@@ -15,23 +15,16 @@
  * limitations under the License.
  */
 
-import Beagle
-import BeagleSchema
+import Foundation
 
-struct Color: AutoDecodable {
-    let hex: String
-    let onPress: Action
-}
-
-struct ColorSelector: Widget, AutoDecodable {
-    var widgetProperties: WidgetProperties
-    var colors: [Color]
-    
-    func toView(renderer: BeagleRenderer) -> UIView {
-        let view = ScrollSelector(selectorType: .color(colors: colors.map { $0.hex }))
-        view.onItemPress = { index in
-            renderer.controller.execute(action: self.colors[index].onPress, sender: view)
+enum Home {
+    enum LoginCD {
+        struct Response: Codable {
+            let userName: String
         }
-        return view
+        
+        struct ViewModel {
+            let message: String
+        }
     }
 }

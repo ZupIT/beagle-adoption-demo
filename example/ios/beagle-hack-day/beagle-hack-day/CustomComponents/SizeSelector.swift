@@ -15,12 +15,10 @@
  * limitations under the License.
  */
 
-import UIKit
 import Beagle
 import BeagleSchema
 
 struct SizeSelector: Widget, AutoDecodable {
-    
     var widgetProperties: WidgetProperties
     
     var sizes: [String]

@@ -15,23 +15,21 @@
  * limitations under the License.
  */
 
-import Beagle
-import BeagleSchema
+import UIKit
 
-struct Color: AutoDecodable {
-    let hex: String
-    let onPress: Action
+protocol ViewCode {
+    func setup()
+    func setupHierarchy()
+    func setupConstraints()
+    func additionalConfigurations()
 }
 
-struct ColorSelector: Widget, AutoDecodable {
-    var widgetProperties: WidgetProperties
-    var colors: [Color]
-    
-    func toView(renderer: BeagleRenderer) -> UIView {
-        let view = ScrollSelector(selectorType: .color(colors: colors.map { $0.hex }))
-        view.onItemPress = { index in
-            renderer.controller.execute(action: self.colors[index].onPress, sender: view)
-        }
-        return view
+extension ViewCode where Self: UIView {
+    func setup() {
+        setupHierarchy()
+        setupConstraints()
+        additionalConfigurations()
     }
+    
+    func additionalConfigurations() {}
 }

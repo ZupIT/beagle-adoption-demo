@@ -20,7 +20,6 @@ import UIKit
 class BackgroundView: UIView {
     
     // MARK: -
-    
     public enum Direction {
         case horizontal
         case vertical
@@ -46,7 +45,6 @@ class BackgroundView: UIView {
     }
     
     // MARK: -
-    
     override init(frame: CGRect) {
         self.colors = []
         self.direction = .vertical
@@ -64,7 +62,6 @@ class BackgroundView: UIView {
     }
     
     // MARK: -
-    
     public var colors: [UIColor] {
         didSet {
             gradientLayer?.colors = colors.map { $0.cgColor }
@@ -91,7 +88,6 @@ class BackgroundView: UIView {
     }
     
     // MARK: -
-    
     override class var layerClass: AnyClass {
         return CAGradientLayer.self
     }

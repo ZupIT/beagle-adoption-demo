@@ -15,24 +15,22 @@
  * limitations under the License.
  */
 
-import UIKit
 import Beagle
 import BeagleSchema
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
         window = UIWindow(frame: UIScreen.main.bounds)
         
-        BeagleConfig.config()
+        BeagleConfig.setup()
         
-        let remotevc = ViewController()
+        let controller = HomeFactory.makeController()
    
-        let navigationController = UINavigationController(rootViewController: remotevc)
+        let navigationController = UINavigationController(rootViewController: controller)
         navigationController.isNavigationBarHidden = true
         
         window?.rootViewController = navigationController
