@@ -36,7 +36,7 @@ data class ImageDetail(
 ) : WidgetView() {
 
     override fun buildView(rootView: RootView) = ImageDetailView(rootView.getContext()).apply {
-        observeBindChanges(rootView, value) {
+        observeBindChanges(rootView, this, value) {
             tvDetail.text = it
         }
         getImageResourceByImageType(context)?.let {
@@ -44,7 +44,7 @@ data class ImageDetail(
         }
     }
 
-    private fun getImageResourceByImageType(context: Context) : Int? {
+    private fun getImageResourceByImageType(context: Context): Int? {
         val resourceId = context.resources.getIdentifier(
             "ic_${image.name}",
             "drawable",

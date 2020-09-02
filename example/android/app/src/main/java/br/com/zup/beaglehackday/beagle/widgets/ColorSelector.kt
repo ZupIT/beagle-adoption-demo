@@ -36,7 +36,7 @@ data class ColorSelector(
     override fun buildView(rootView: RootView) = ColorSelectorView(rootView.getContext()).apply {
         colors.forEach {
             setItem(it.hex) {
-                handleEvent(rootView, it.onPress, "onColorPressed")
+                handleEvent(rootView, this, listOf(it.onPress))
             }
         }
     }
