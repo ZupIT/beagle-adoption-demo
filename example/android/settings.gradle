@@ -20,5 +20,5 @@
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-rootProject.name='BeagleHackDay'
+rootProject.name='BeagleDemo'
 include ':app'
