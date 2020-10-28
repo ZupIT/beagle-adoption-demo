@@ -25,7 +25,9 @@ struct ImageDetail: Widget, AutoDecodable {
     
     func toView(renderer: BeagleRenderer) -> UIView {
         let view = ImageDetails(image: image)
-        renderer.observe(value, andUpdate: \.value, in: view)
+        renderer.observe(value, andUpdateManyIn: view) { (imageValue) in
+            view.value = imageValue ?? ""
+        }
         return view
     }
 }

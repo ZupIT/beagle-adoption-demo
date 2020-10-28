@@ -27,6 +27,10 @@ class BeagleConfig {
         BeagleConfig.registerValidatorProviders(in: dependencies)
         BeagleConfig.setAppTheme(in: dependencies)
         BeagleConfig.setNetworkClient(in: dependencies)
+        let innerDependencies = InnerDependencies()
+        dependencies.networkClient = NetworkClientDefault(dependencies: innerDependencies)
+        dependencies.cacheManager = CacheManagerDefault(dependencies: innerDependencies)
+        dependencies.logger = innerDependencies.logger
         dependencies.urlBuilder = UrlBuilder(baseUrl: URL(string: Constants.Server.baseURL))
         Beagle.dependencies = dependencies
         
@@ -64,4 +68,8 @@ class BeagleConfig {
         }
         dependencies.validatorProvider = provider
     }
+}
+
+class InnerDependencies: DependencyLogger {
+    var logger: BeagleLoggerType = BeagleLoggerDefault()
 }

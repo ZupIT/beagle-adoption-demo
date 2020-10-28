@@ -30,7 +30,7 @@ struct ColorSelector: Widget, AutoDecodable {
     func toView(renderer: BeagleRenderer) -> UIView {
         let view = ScrollSelector(selectorType: .color(colors: colors.map { $0.hex }))
         view.onItemPress = { index in
-            renderer.controller.execute(action: self.colors[index].onPress, sender: view)
+            renderer.controller.execute(actions: [self.colors[index].onPress], origin: view)
         }
         return view
     }
