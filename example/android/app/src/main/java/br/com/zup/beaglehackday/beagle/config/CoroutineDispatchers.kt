@@ -20,21 +20,24 @@
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package br.com.zup.beaglehackday
+package br.com.zup.beaglehackday.beagle.config
 
-import android.app.Application
-import br.com.zup.beaglehackday.beagle.BeagleSetup
+import kotlinx.coroutines.CoroutineDispatcher
+import kotlinx.coroutines.Dispatchers
 
-class AppApplication : Application() {
+internal object CoroutineDispatchers {
 
-    override fun onCreate() {
-        super.onCreate()
-        APPLICATION = this
-        BeagleSetup().init(this)
+    init {
+        reset()
     }
 
-    companion object {
-        var APPLICATION: Application? = null
-    }
+    lateinit var IO: CoroutineDispatcher
+    lateinit var Main: CoroutineDispatcher
+    lateinit var Default: CoroutineDispatcher
 
+    fun reset() {
+        IO = Dispatchers.IO
+        Main = Dispatchers.Main
+        Default = Dispatchers.Default
+    }
 }

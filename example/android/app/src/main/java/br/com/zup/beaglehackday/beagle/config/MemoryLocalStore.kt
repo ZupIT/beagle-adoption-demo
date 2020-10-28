@@ -20,21 +20,27 @@
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package br.com.zup.beaglehackday
+package br.com.zup.beaglehackday.beagle.config
 
-import android.app.Application
-import br.com.zup.beaglehackday.beagle.BeagleSetup
+import br.com.zup.beagle.android.store.LocalStore
 
-class AppApplication : Application() {
+internal object MemoryLocalStore : LocalStore {
 
-    override fun onCreate() {
-        super.onCreate()
-        APPLICATION = this
-        BeagleSetup().init(this)
+    private val cache = mutableMapOf<String, String>()
+
+    override fun save(key: String, value: String) {
+        cache[key] = value
     }
 
-    companion object {
-        var APPLICATION: Application? = null
+    override fun restore(key: String): String? {
+        return cache[key]
     }
 
+    override fun delete(key: String) {
+        cache.remove(key)
+    }
+
+    override fun getAll(): Map<String, String> {
+        return cache.toMap()
+    }
 }

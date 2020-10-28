@@ -20,21 +20,29 @@
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package br.com.zup.beaglehackday
+package br.com.zup.beaglehackday.beagle.config
 
-import android.app.Application
-import br.com.zup.beaglehackday.beagle.BeagleSetup
+import java.lang.Exception
+import java.net.HttpURLConnection
 
-class AppApplication : Application() {
+internal fun HttpURLConnection.getSafeResponseCode(): Int? {
+    return getMessageFormatted { this.responseCode }
+}
 
-    override fun onCreate() {
-        super.onCreate()
-        APPLICATION = this
-        BeagleSetup().init(this)
+internal fun HttpURLConnection.getSafeResponseMessage(): String? {
+    return getMessageFormatted { this.responseMessage }
+}
+
+internal fun HttpURLConnection.getSafeError(): ByteArray? {
+    return getMessageFormatted { this.errorStream.readBytes() }
+}
+
+internal typealias GetData<T> = () -> T
+
+internal fun <T> getMessageFormatted(getData: GetData<T>): T? {
+    return try {
+        getData.invoke()
+    } catch (exception: Exception) {
+        null
     }
-
-    companion object {
-        var APPLICATION: Application? = null
-    }
-
 }

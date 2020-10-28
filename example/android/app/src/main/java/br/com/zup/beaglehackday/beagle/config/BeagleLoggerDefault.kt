@@ -20,21 +20,31 @@
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package br.com.zup.beaglehackday
+package br.com.zup.beaglehackday.beagle.config
 
-import android.app.Application
-import br.com.zup.beaglehackday.beagle.BeagleSetup
+import android.util.Log
+import br.com.zup.beagle.android.annotation.BeagleComponent
+import br.com.zup.beagle.android.logger.BeagleLogger
 
-class AppApplication : Application() {
+private const val BEAGLE_TAG = "BeagleSDK"
 
-    override fun onCreate() {
-        super.onCreate()
-        APPLICATION = this
-        BeagleSetup().init(this)
+@BeagleComponent
+class BeagleLoggerDefault : BeagleLogger {
+
+    override fun warning(message: String) {
+        Log.w(BEAGLE_TAG, message)
     }
 
-    companion object {
-        var APPLICATION: Application? = null
+    override fun error(message: String) {
+        Log.e(BEAGLE_TAG, message)
+    }
+
+    override fun error(message: String, throwable: Throwable) {
+        Log.e(BEAGLE_TAG, message, throwable)
+    }
+
+    override fun info(message: String) {
+        Log.i(BEAGLE_TAG, message)
     }
 
 }
