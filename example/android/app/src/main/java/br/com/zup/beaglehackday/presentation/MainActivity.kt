@@ -29,9 +29,11 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import br.com.zup.beagle.android.preview.PreviewActivity
+import br.com.zup.beagle.android.utils.newServerDrivenIntent
 import br.com.zup.beagle.android.view.BeagleActivity
 import br.com.zup.beagle.android.view.ScreenRequest
 import br.com.zup.beaglehackday.R
+import br.com.zup.beaglehackday.beagle.AppBeagleActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -50,7 +52,7 @@ class MainActivity : AppCompatActivity() {
 
         btDemo.setOnClickListener {
             //viewModel.getCircle("circleId")
-            startActivity(BeagleActivity.newIntent(this, ScreenRequest(url = "/outfit")))
+            startActivity(newServerDrivenIntent<AppBeagleActivity>(ScreenRequest(url = "/outfit")))
         }
     }
 

@@ -29,22 +29,22 @@ import br.com.zup.beaglehackday.R
 @BeagleComponent
 class AppDesignSystem : DesignSystem() {
 
-    override fun buttonStyle(id: String) = when(id) {
+    override fun buttonStyle(id: String) = when (id) {
         "customButton" -> R.style.DefaultButton_CustomButton
         else -> R.style.DefaultButton
     }
 
     override fun image(id: String) = when (id) {
-            "back" -> R.drawable.ic_back
-            "bag" -> R.drawable.ic_bag
-            "check" -> R.drawable.ic_check
-            "red_heart" -> R.drawable.ic_red_heart
-            "heart" -> R.drawable.ic_heart
-            "plus" -> R.drawable.ic_plus
-            "question" -> R.drawable.ic_question
-            "shopping" -> R.drawable.ic_shopping
-            "shirt" -> R.drawable.tshirt
-            else -> android.R.drawable.ic_menu_help
+        "back" -> R.drawable.ic_back
+        "bag" -> R.drawable.ic_bag
+        "check" -> R.drawable.ic_check
+        "red_heart" -> R.drawable.ic_red_heart
+        "heart" -> R.drawable.ic_heart
+        "plus" -> R.drawable.ic_plus
+        "question" -> R.drawable.ic_question
+        "shopping" -> R.drawable.ic_shopping
+        "shirt" -> R.drawable.tshirt
+        else -> android.R.drawable.ic_menu_help
     }
 
     override fun textStyle(id: String) = when (id) {
