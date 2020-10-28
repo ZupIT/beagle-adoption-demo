@@ -1,14 +1,14 @@
 PODS:
-  - Beagle (1.0.0):
-    - Beagle/Beagle (= 1.0.0)
-  - Beagle/Beagle (1.0.0):
-    - BeagleSchema (= 1.0.0)
+  - Beagle (1.4.0):
+    - Beagle/Beagle (= 1.4.0)
+  - Beagle/Beagle (1.4.0):
+    - BeagleSchema (= 1.4.0)
     - YogaKit
-  - Beagle/Preview (1.0.0):
+  - Beagle/Preview (1.4.0):
     - Beagle/Beagle
     - Starscream
-  - BeagleSchema (1.0.0)
-  - Starscream (4.0.3)
+  - BeagleSchema (1.4.0)
+  - Starscream (4.0.4)
   - Yoga (1.14.0)
   - YogaKit (1.18.1):
     - Yoga (~> 1.14)
@@ -35,9 +35,9 @@ CHECKOUT OPTIONS:
     :git: https://github.com/ZupIT/YogaKit
 
 SPEC CHECKSUMS:
-  Beagle: 4c08b3b63abfcfcaadacfd7cb45363941dcca648
-  BeagleSchema: 31c586f081a6d6497cbf4b3e77027d16319e0e87
-  Starscream: ef06f0961fff0880bca0604416d61141e4faca67
+  Beagle: da52a9eb57aef46a92d758ea74daaadd29778874
+  BeagleSchema: 6ebafa71db33bc60914d7783fbe1813dcbd93d74
+  Starscream: 5178aed56b316f13fa3bc55694e583d35dd414d9
   Yoga: cff67a400f6b74dc38eb0bad4f156673d9aa980c
   YogaKit: 3a733275fd1639b96a304f6f5c11421478371e6b
 

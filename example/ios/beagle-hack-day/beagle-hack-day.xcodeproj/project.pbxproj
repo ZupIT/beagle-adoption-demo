@@ -17,6 +17,15 @@
 		42846B5424D4FB9E00B94DE3 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42846B5324D4FB9E00B94DE3 /* HomeRouter.swift */; };
 		42846B5624D500C500B94DE3 /* HomeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42846B5524D500C500B94DE3 /* HomeFactory.swift */; };
 		42DF8E2224D88BD30027C544 /* SelectorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DF8E2124D88BD30027C544 /* SelectorCell.swift */; };
+		6E5B0E822549DB9A0099D6F6 /* CacheLRU.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5B0E742549DB9A0099D6F6 /* CacheLRU.swift */; };
+		6E5B0E832549DB9A0099D6F6 /* DoublyLinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5B0E752549DB9A0099D6F6 /* DoublyLinkedList.swift */; };
+		6E5B0E852549DB9A0099D6F6 /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5B0E782549DB9A0099D6F6 /* CacheManager.swift */; };
+		6E5B0E872549DB9A0099D6F6 /* CacheDiskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5B0E7C2549DB9A0099D6F6 /* CacheDiskManager.swift */; };
+		6E5B0E882549DB9A0099D6F6 /* CoreCache.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6E5B0E7D2549DB9A0099D6F6 /* CoreCache.xcdatamodeld */; };
+		6E5B0E8A2549DB9A0099D6F6 /* CacheEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5B0E812549DB9A0099D6F6 /* CacheEntity+CoreDataProperties.swift */; };
+		6E5B0E8D2549DBD10099D6F6 /* BeagleLoggerDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5B0E8C2549DBD10099D6F6 /* BeagleLoggerDefault.swift */; };
+		6E5B0E9A2549DBFE0099D6F6 /* HttpRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5B0E952549DBFE0099D6F6 /* HttpRequestBuilder.swift */; };
+		6E5B0E9B2549DBFE0099D6F6 /* NetworkClientDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5B0E962549DBFE0099D6F6 /* NetworkClientDefault.swift */; };
 		7C015B382480160D00E5FF77 /* SizeSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C015B372480160D00E5FF77 /* SizeSelector.swift */; };
 		7C015B3A2480173D00E5FF77 /* ColorSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C015B392480173D00E5FF77 /* ColorSelector.swift */; };
 		7C015B3C24815BDD00E5FF77 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C015B3B24815BDD00E5FF77 /* BackgroundView.swift */; };
@@ -52,6 +61,15 @@
 		42846B5324D4FB9E00B94DE3 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		42846B5524D500C500B94DE3 /* HomeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFactory.swift; sourceTree = "<group>"; };
 		42DF8E2124D88BD30027C544 /* SelectorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectorCell.swift; sourceTree = "<group>"; };
+		6E5B0E742549DB9A0099D6F6 /* CacheLRU.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheLRU.swift; sourceTree = "<group>"; };
+		6E5B0E752549DB9A0099D6F6 /* DoublyLinkedList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoublyLinkedList.swift; sourceTree = "<group>"; };
+		6E5B0E782549DB9A0099D6F6 /* CacheManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
+		6E5B0E7C2549DB9A0099D6F6 /* CacheDiskManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheDiskManager.swift; sourceTree = "<group>"; };
+		6E5B0E7E2549DB9A0099D6F6 /* CoreCache.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreCache.xcdatamodel; sourceTree = "<group>"; };
+		6E5B0E812549DB9A0099D6F6 /* CacheEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CacheEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		6E5B0E8C2549DBD10099D6F6 /* BeagleLoggerDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeagleLoggerDefault.swift; sourceTree = "<group>"; };
+		6E5B0E952549DBFE0099D6F6 /* HttpRequestBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpRequestBuilder.swift; sourceTree = "<group>"; };
+		6E5B0E962549DBFE0099D6F6 /* NetworkClientDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkClientDefault.swift; sourceTree = "<group>"; };
 		7C015B372480160D00E5FF77 /* SizeSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeSelector.swift; sourceTree = "<group>"; };
 		7C015B392480173D00E5FF77 /* ColorSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSelector.swift; sourceTree = "<group>"; };
 		7C015B3B24815BDD00E5FF77 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
@@ -130,6 +148,53 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		6E5B0E722549DB9A0099D6F6 /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				6E5B0E732549DB9A0099D6F6 /* LRU */,
+				6E5B0E782549DB9A0099D6F6 /* CacheManager.swift */,
+				6E5B0E7B2549DB9A0099D6F6 /* CoreData */,
+			);
+			name = Cache;
+			path = ../../../../../../beagle/iOS/Example/BeagleDemo/BeagleDemo/BeagleConfig/Cache;
+			sourceTree = "<group>";
+		};
+		6E5B0E732549DB9A0099D6F6 /* LRU */ = {
+			isa = PBXGroup;
+			children = (
+				6E5B0E742549DB9A0099D6F6 /* CacheLRU.swift */,
+				6E5B0E752549DB9A0099D6F6 /* DoublyLinkedList.swift */,
+			);
+			path = LRU;
+			sourceTree = "<group>";
+		};
+		6E5B0E7B2549DB9A0099D6F6 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				6E5B0E7C2549DB9A0099D6F6 /* CacheDiskManager.swift */,
+				6E5B0E7D2549DB9A0099D6F6 /* CoreCache.xcdatamodeld */,
+				6E5B0E812549DB9A0099D6F6 /* CacheEntity+CoreDataProperties.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		6E5B0E8B2549DBD10099D6F6 /* Logger */ = {
+			isa = PBXGroup;
+			children = (
+				6E5B0E8C2549DBD10099D6F6 /* BeagleLoggerDefault.swift */,
+			);
+			path = Logger;
+			sourceTree = "<group>";
+		};
+		6E5B0E8E2549DBFE0099D6F6 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				6E5B0E952549DBFE0099D6F6 /* HttpRequestBuilder.swift */,
+				6E5B0E962549DBFE0099D6F6 /* NetworkClientDefault.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		7C015B35248015EA00E5FF77 /* DesignSystem */ = {
 			isa = PBXGroup;
 			children = (
@@ -173,7 +238,6 @@
 			isa = PBXGroup;
 			children = (
 				7CA127CE248EBE47009F2E97 /* Worker */,
-				7C015B4024818B7A00E5FF77 /* Generated */,
 				7C015B35248015EA00E5FF77 /* DesignSystem */,
 				7C5CC7A5247E9D6A00F787D4 /* Extensions */,
 				7C5CC7A2247DC8F100F787D4 /* CustomComponents */,
@@ -190,6 +254,9 @@
 		7C5CC79B247DBD7600F787D4 /* BeagleConfigurations */ = {
 			isa = PBXGroup;
 			children = (
+				6E5B0E8E2549DBFE0099D6F6 /* Network */,
+				6E5B0E8B2549DBD10099D6F6 /* Logger */,
+				6E5B0E722549DB9A0099D6F6 /* Cache */,
 				7C5CC799247DBC9700F787D4 /* BeagleConfig.swift */,
 				7C5CC79C247DBD8500F787D4 /* Styles.swift */,
 				7C5CC79E247DBDF800F787D4 /* Constants.swift */,
@@ -360,32 +427,41 @@
 			files = (
 				7C5CC7AF247EF13900F787D4 /* SelectorType.swift in Sources */,
 				7C5CC7A7247E9D7F00F787D4 /* UIImage+Extension.swift in Sources */,
+				6E5B0E8A2549DB9A0099D6F6 /* CacheEntity+CoreDataProperties.swift in Sources */,
+				6E5B0E882549DB9A0099D6F6 /* CoreCache.xcdatamodeld in Sources */,
 				7CF5921A24A6684F00FD311C /* ImageDetails.swift in Sources */,
 				7C5CC79F247DBDF800F787D4 /* Constants.swift in Sources */,
 				42303AD624D8DC60005ED66E /* HomePresenter.swift in Sources */,
 				7C5CC78A247DBA2300F787D4 /* HomeViewController.swift in Sources */,
+				6E5B0E872549DB9A0099D6F6 /* CacheDiskManager.swift in Sources */,
 				42846B5624D500C500B94DE3 /* HomeFactory.swift in Sources */,
 				7CA127D0248EBE67009F2E97 /* CharlesWorker.swift in Sources */,
 				42303AD024D8C738005ED66E /* HomeInteractor.swift in Sources */,
 				7C5CC79A247DBC9700F787D4 /* BeagleConfig.swift in Sources */,
 				7C015B382480160D00E5FF77 /* SizeSelector.swift in Sources */,
 				7C5CC7AD247EEB6900F787D4 /* SizeCell.swift in Sources */,
+				6E5B0E8D2549DBD10099D6F6 /* BeagleLoggerDefault.swift in Sources */,
 				7C5CC7A9247E9E4500F787D4 /* UIView+AutoLayout.swift in Sources */,
 				7C015B4424818B7A00E5FF77 /* Components+Decodable.swift in Sources */,
 				42DF8E2224D88BD30027C544 /* SelectorCell.swift in Sources */,
 				42846B5424D4FB9E00B94DE3 /* HomeRouter.swift in Sources */,
+				6E5B0E832549DB9A0099D6F6 /* DoublyLinkedList.swift in Sources */,
 				7C5CC7AB247EE24700F787D4 /* ScrollSelector.swift in Sources */,
 				7C015B3E248177E300E5FF77 /* ImageDetail.swift in Sources */,
+				6E5B0E822549DB9A0099D6F6 /* CacheLRU.swift in Sources */,
 				7C5CC786247DBA2300F787D4 /* AppDelegate.swift in Sources */,
 				7C015B3C24815BDD00E5FF77 /* BackgroundView.swift in Sources */,
 				42303AD224D8C7E7005ED66E /* HomeWorker.swift in Sources */,
+				6E5B0E9A2549DBFE0099D6F6 /* HttpRequestBuilder.swift in Sources */,
 				42303AD424D8CB7A005ED66E /* HomeModels.swift in Sources */,
 				42846B4F24D4C95700B94DE3 /* HomeView.swift in Sources */,
 				7C015B3A2480173D00E5FF77 /* ColorSelector.swift in Sources */,
+				6E5B0E852549DB9A0099D6F6 /* CacheManager.swift in Sources */,
 				7C5CC7A4247DC90600F787D4 /* ColorCell.swift in Sources */,
 				7CDDD03F24A4103E0028B07B /* UIColor+hex.swift in Sources */,
 				42846B5224D4CB6700B94DE3 /* ViewCode.swift in Sources */,
 				7C5CC79D247DBD8500F787D4 /* Styles.swift in Sources */,
+				6E5B0E9B2549DBFE0099D6F6 /* NetworkClientDefault.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -573,6 +649,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		6E5B0E7D2549DB9A0099D6F6 /* CoreCache.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				6E5B0E7E2549DB9A0099D6F6 /* CoreCache.xcdatamodel */,
+			);
+			currentVersion = 6E5B0E7E2549DB9A0099D6F6 /* CoreCache.xcdatamodel */;
+			path = CoreCache.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 7C5CC77A247DBA2300F787D4 /* Project object */;
 }
