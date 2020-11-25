@@ -22,13 +22,32 @@
 
 package br.com.zup.beaglehackday
 
-import androidx.test.platform.app.InstrumentationRegistry
+import android.content.Intent
+import androidx.core.content.ContextCompat.startActivity
+import androidx.test.core.app.ActivityScenario
+import androidx.test.espresso.Espresso.onView
+import androidx.test.espresso.action.ViewActions.click
+import androidx.test.espresso.assertion.ViewAssertions.matches
+import androidx.test.espresso.matcher.ViewMatchers
+import androidx.test.espresso.matcher.ViewMatchers.isEnabled
+import androidx.test.espresso.matcher.ViewMatchers.withId
 import androidx.test.ext.junit.runners.AndroidJUnit4
-
+import androidx.test.platform.app.InstrumentationRegistry
+import androidx.test.rule.ActivityTestRule
+import br.com.zup.beagle.android.utils.newServerDrivenIntent
+import br.com.zup.beagle.android.utils.toAndroidId
+import br.com.zup.beagle.android.view.ScreenRequest
+import br.com.zup.beagle.android.view.ServerDrivenActivity
+import br.com.zup.beaglehackday.beagle.AppBeagleActivity
+import br.com.zup.beaglehackday.presentation.MainActivity
+import br.com.zup.beaglehackday.robots.ScreenRobot
+import br.com.zup.beaglehackday.utils.WaitHelper
+import org.hamcrest.CoreMatchers.not
+import org.junit.Assert.assertEquals
+import org.junit.Before
+import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
-
-import org.junit.Assert.*
 
 /**
  * Instrumented test, which will execute on an Android device.
@@ -37,10 +56,36 @@ import org.junit.Assert.*
  */
 @RunWith(AndroidJUnit4::class)
 class ExampleInstrumentedTest {
+
+    @get:Rule
+    val activityRule = ActivityTestRule<AppBeagleActivity>(AppBeagleActivity::class.java)
+
+    @Before
+    fun setup() {
+        activityRule.launchActivity(activityRule.activity.newServerDrivenIntent<AppBeagleActivity>(ScreenRequest(url = "/outfit")))
+
+    }
+
     @Test
-    fun useAppContext() {
-        // Context of the app under test.
-        val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        assertEquals("br.com.zup.beaglehackday", appContext.packageName)
+    fun button_validation_is_being_rendered(){
+        ScreenRobot
+                .checkViewIdIsDisplayed("submitButton".toAndroidId())
+    }
+
+    @Test
+    fun image_validation_is_being_rendered(){
+        ScreenRobot
+                .checkViewIdIsDisplayed("shirtImage".toAndroidId())
+    }
+
+    @Test
+    fun check_text_image() {
+        ScreenRobot
+                .checkOnText("$23.99")
+    }
+
+    @Test
+    fun test_action_button(){
+        onView(withId("submitButton".toAndroidId())).perform(click())
     }
 }

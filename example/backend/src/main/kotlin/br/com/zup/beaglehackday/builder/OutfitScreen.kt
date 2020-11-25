@@ -26,6 +26,7 @@ import br.com.zup.beagle.core.CornerRadius
 import br.com.zup.beagle.core.PositionType
 import br.com.zup.beagle.core.Style
 import br.com.zup.beagle.ext.applyStyle
+import br.com.zup.beagle.ext.setId
 import br.com.zup.beagle.ext.unitPercent
 import br.com.zup.beagle.ext.unitReal
 import br.com.zup.beagle.widget.Widget
@@ -114,7 +115,7 @@ class OutfitScreen : ScreenBuilder {
             text = "Add to cart",
             styleId = "customButton",
             onPress = listOf(Navigate.PushView(Route.Remote("/detail")))
-        )
+        ).setId("submitButton")
     }
 
     private fun outfitSize(): Widget {
@@ -166,7 +167,7 @@ class OutfitScreen : ScreenBuilder {
                     mode = ImageContentMode.CENTER
                 ).applyStyle(
                     Style(cornerRadius = CornerRadius(20.0))
-                ),
+                ).setId("shirtImage"),
                 ImageDetail(
                     value = expressionOf("@{shirtData.price}"),
                     image = ImageType.RED_HEART
