@@ -22,70 +22,79 @@
 
 package br.com.zup.beaglehackday
 
-import android.content.Intent
-import androidx.core.content.ContextCompat.startActivity
-import androidx.test.core.app.ActivityScenario
-import androidx.test.espresso.Espresso.onView
-import androidx.test.espresso.action.ViewActions.click
+import android.R
+import android.widget.Toolbar
+import androidx.test.espresso.Espresso
 import androidx.test.espresso.assertion.ViewAssertions.matches
-import androidx.test.espresso.matcher.ViewMatchers
-import androidx.test.espresso.matcher.ViewMatchers.isEnabled
-import androidx.test.espresso.matcher.ViewMatchers.withId
+import androidx.test.espresso.matcher.ViewMatchers.isAssignableFrom
 import androidx.test.ext.junit.runners.AndroidJUnit4
-import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.rule.ActivityTestRule
 import br.com.zup.beagle.android.utils.newServerDrivenIntent
 import br.com.zup.beagle.android.utils.toAndroidId
 import br.com.zup.beagle.android.view.ScreenRequest
-import br.com.zup.beagle.android.view.ServerDrivenActivity
 import br.com.zup.beaglehackday.beagle.AppBeagleActivity
-import br.com.zup.beaglehackday.presentation.MainActivity
 import br.com.zup.beaglehackday.robots.ScreenRobot
-import br.com.zup.beaglehackday.utils.WaitHelper
-import org.hamcrest.CoreMatchers.not
-import org.junit.Assert.assertEquals
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
 
-/**
- * Instrumented test, which will execute on an Android device.
- *
- * See [testing documentation](http://d.android.com/tools/testing).
- */
 @RunWith(AndroidJUnit4::class)
-class ExampleInstrumentedTest {
+class ScreenOutfitInstrumentedTest {
 
     @get:Rule
     val activityRule = ActivityTestRule<AppBeagleActivity>(AppBeagleActivity::class.java)
 
     @Before
     fun setup() {
-        activityRule.launchActivity(activityRule.activity.newServerDrivenIntent<AppBeagleActivity>(ScreenRequest(url = "/outfit")))
-
+        activityRule.launchActivity(
+                activityRule.activity.newServerDrivenIntent<AppBeagleActivity>(
+                        ScreenRequest(url = "/outfit")
+                )
+        )
     }
 
     @Test
     fun button_validation_is_being_rendered(){
-        ScreenRobot
-                .checkViewIdIsDisplayed("submitButton".toAndroidId())
+        ScreenRobot()
+                .viewAndClick("submitButton".toAndroidId())
     }
 
     @Test
-    fun image_validation_is_being_rendered(){
-        ScreenRobot
+    fun image_shirt_validation_is_being_rendered(){
+        ScreenRobot()
                 .checkViewIdIsDisplayed("shirtImage".toAndroidId())
     }
 
     @Test
-    fun check_text_image() {
-        ScreenRobot
-                .checkOnText("$23.99")
+    fun image_detail_validation_is_being_rendered(){
+        ScreenRobot()
+                .checkViewIdIsDisplayed("imageDetail".toAndroidId())
     }
 
     @Test
-    fun test_action_button(){
-        onView(withId("submitButton".toAndroidId())).perform(click())
+    fun colorSelector_validation_is_being_rendered(){
+        ScreenRobot()
+                .checkViewIdIsDisplayed("colorSelector".toAndroidId())
+    }
+
+    @Test
+    fun sizeSelector_validation_is_being_rendered(){
+        ScreenRobot()
+                .checkViewIdIsDisplayed("sizeSelector".toAndroidId())
+    }
+
+    @Test
+    fun navigationBar_heart_icon_validation_is_being_rendered_and_click(){
+        ScreenRobot()
+                .viewAndClick("heartIcon".toAndroidId())
+                .clickOnTextDialog("OK")
+    }
+
+    @Test
+    fun navigationBar_bag_icon_validation_is_being_rendered_and_click(){
+        ScreenRobot()
+                .viewAndClick("bagIcon".toAndroidId())
+                .clickOnTextDialog("OK")
     }
 }

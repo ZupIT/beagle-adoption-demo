@@ -22,24 +22,47 @@
 
 package br.com.zup.beaglehackday.robots
 
-import androidx.test.espresso.Espresso
-import androidx.test.espresso.assertion.ViewAssertions
+import androidx.test.espresso.Espresso.onView
+import androidx.test.espresso.action.ViewActions
+import androidx.test.espresso.action.ViewActions.pressBack
+import androidx.test.espresso.assertion.ViewAssertions.matches
+import androidx.test.espresso.matcher.RootMatchers.isDialog
 import androidx.test.espresso.matcher.ViewMatchers
+import androidx.test.espresso.matcher.ViewMatchers.isDisplayed
+import androidx.test.espresso.matcher.ViewMatchers.withText
 import br.com.zup.beaglehackday.utils.WaitHelper
 import org.hamcrest.Matchers
 
-object ScreenRobot {
+class ScreenRobot {
 
-    fun checkViewIdIsDisplayed(id: Int) {
+    fun checkViewIdIsDisplayed(id: Int): ScreenRobot {
         WaitHelper.waitForWithId(id)
-        Espresso.onView(ViewMatchers.withId(id)).check(
-            ViewAssertions.matches(
-                ViewMatchers.isDisplayed()
+        onView(ViewMatchers.withId(id)).check(
+            matches(
+                isDisplayed()
             )
         )
+        return this
     }
 
-    fun checkOnText(text: String?) {
-        Espresso.onView(Matchers.allOf(ViewMatchers.withText(text), ViewMatchers.isDisplayed()))
+    fun viewAndClick(id: Int): ScreenRobot {
+        checkViewIdIsDisplayed(id)
+        clickView(id)
+        return this
+    }
+
+    private fun clickView(id: Int): ScreenRobot{
+        onView(ViewMatchers.withId(id)).perform(ViewActions.click())
+        return this
+    }
+
+    fun clickOnTextDialog(text: String): ScreenRobot {
+        onView(withText(text)).inRoot(isDialog()).check(matches(isDisplayed())).perform(pressBack())
+        return this
+    }
+
+    fun checkOnText(text: String): ScreenRobot {
+        onView(Matchers.allOf(withText(text), isDisplayed()))
+        return this
     }
 }
