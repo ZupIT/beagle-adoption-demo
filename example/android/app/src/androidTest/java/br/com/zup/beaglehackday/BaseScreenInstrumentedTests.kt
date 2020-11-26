@@ -23,31 +23,26 @@
 package br.com.zup.beaglehackday
 
 import androidx.test.ext.junit.runners.AndroidJUnit4
-import br.com.zup.beagle.android.utils.toAndroidId
-import br.com.zup.beaglehackday.robots.ScreenRobot
-import org.junit.Before
-import org.junit.Test
+import androidx.test.rule.ActivityTestRule
+import br.com.zup.beagle.android.utils.newServerDrivenIntent
+import br.com.zup.beagle.android.view.ScreenRequest
+import br.com.zup.beaglehackday.beagle.AppBeagleActivity
+import org.junit.Rule
 import org.junit.runner.RunWith
 
 @RunWith(AndroidJUnit4::class)
-class ScreenDetailInstrumentedTest: BaseScreenInstrumentedTests() {
+open class BaseScreenInstrumentedTests {
 
-    @Before
-    fun setup() {
-       starActivity("/detail")
+    @get:Rule
+    val activityRule = ActivityTestRule<AppBeagleActivity>(AppBeagleActivity::class.java)
+
+    fun starActivity(url: String) {
+        activityRule.launchActivity(
+            activityRule.activity.newServerDrivenIntent<AppBeagleActivity>(
+                ScreenRequest(url = url)
+            )
+        )
     }
 
-    @Test
-    fun text_detail_validation_is_being_rendered() {
-        ScreenRobot()
-            .checkOnText("This navigation is awesome!")
-    }
-
-    @Test
-    fun navigationBar_heart_icon_validation_is_being_rendered_and_click(){
-        ScreenRobot()
-            .viewAndClick("heartIconDetail".toAndroidId())
-            .clickOnTextDialog("OK")
-    }
 
 }

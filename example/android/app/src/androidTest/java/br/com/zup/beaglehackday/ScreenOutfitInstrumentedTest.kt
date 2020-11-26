@@ -22,36 +22,19 @@
 
 package br.com.zup.beaglehackday
 
-import android.R
-import android.widget.Toolbar
-import androidx.test.espresso.Espresso
-import androidx.test.espresso.assertion.ViewAssertions.matches
-import androidx.test.espresso.matcher.ViewMatchers.isAssignableFrom
 import androidx.test.ext.junit.runners.AndroidJUnit4
-import androidx.test.rule.ActivityTestRule
-import br.com.zup.beagle.android.utils.newServerDrivenIntent
 import br.com.zup.beagle.android.utils.toAndroidId
-import br.com.zup.beagle.android.view.ScreenRequest
-import br.com.zup.beaglehackday.beagle.AppBeagleActivity
 import br.com.zup.beaglehackday.robots.ScreenRobot
 import org.junit.Before
-import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
 
 @RunWith(AndroidJUnit4::class)
-class ScreenOutfitInstrumentedTest {
-
-    @get:Rule
-    val activityRule = ActivityTestRule<AppBeagleActivity>(AppBeagleActivity::class.java)
+class ScreenOutfitInstrumentedTest: BaseScreenInstrumentedTests() {
 
     @Before
     fun setup() {
-        activityRule.launchActivity(
-                activityRule.activity.newServerDrivenIntent<AppBeagleActivity>(
-                        ScreenRequest(url = "/outfit")
-                )
-        )
+        starActivity("/outfit")
     }
 
     @Test
