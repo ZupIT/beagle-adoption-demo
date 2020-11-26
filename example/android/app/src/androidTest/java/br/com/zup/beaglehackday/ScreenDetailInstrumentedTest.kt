@@ -34,7 +34,7 @@ class ScreenDetailInstrumentedTest: BaseScreenInstrumentedTests() {
 
     @Before
     fun setup() {
-       starActivity("/detail")
+       startActivity("/detail")
     }
 
     @Test

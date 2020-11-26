@@ -36,7 +36,7 @@ open class BaseScreenInstrumentedTests {
     @get:Rule
     val activityRule = ActivityTestRule<AppBeagleActivity>(AppBeagleActivity::class.java)
 
-    fun starActivity(url: String) {
+    fun startActivity(url: String) {
         activityRule.launchActivity(
             activityRule.activity.newServerDrivenIntent<AppBeagleActivity>(
                 ScreenRequest(url = url)

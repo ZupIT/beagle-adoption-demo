@@ -34,7 +34,7 @@ class ScreenOutfitInstrumentedTest: BaseScreenInstrumentedTests() {
 
     @Before
     fun setup() {
-        starActivity("/outfit")
+        startActivity("/outfit")
     }
 
     @Test
