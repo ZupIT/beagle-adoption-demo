@@ -40,44 +40,44 @@ class ScreenOutfitInstrumentedTest: BaseScreenInstrumentedTests() {
     @Test
     fun button_validation_is_being_rendered(){
         ScreenRobot()
-                .viewAndClick("submitButton".toAndroidId())
+                .checkViewIsDisplayedAndClickOnIt("submitButton".toAndroidId())
     }
 
     @Test
     fun image_shirt_validation_is_being_rendered(){
         ScreenRobot()
-                .checkViewIdIsDisplayed("shirtImage".toAndroidId())
+                .checkViewIsDisplayed("shirtImage".toAndroidId())
     }
 
     @Test
     fun image_detail_validation_is_being_rendered(){
         ScreenRobot()
-                .checkViewIdIsDisplayed("imageDetail".toAndroidId())
+                .checkViewIsDisplayed("imageDetail".toAndroidId())
     }
 
     @Test
     fun colorSelector_validation_is_being_rendered(){
         ScreenRobot()
-                .checkViewIdIsDisplayed("colorSelector".toAndroidId())
+                .checkViewIsDisplayed("colorSelector".toAndroidId())
     }
 
     @Test
     fun sizeSelector_validation_is_being_rendered(){
         ScreenRobot()
-                .checkViewIdIsDisplayed("sizeSelector".toAndroidId())
+                .checkViewIsDisplayed("sizeSelector".toAndroidId())
     }
 
     @Test
     fun navigationBar_heart_icon_validation_is_being_rendered_and_click(){
         ScreenRobot()
-                .viewAndClick("heartIcon".toAndroidId())
+                .checkViewIsDisplayedAndClickOnIt("heartIcon".toAndroidId())
                 .clickOnTextDialog("OK")
     }
 
     @Test
     fun navigationBar_bag_icon_validation_is_being_rendered_and_click(){
         ScreenRobot()
-                .viewAndClick("bagIcon".toAndroidId())
+                .checkViewIsDisplayedAndClickOnIt("bagIcon".toAndroidId())
                 .clickOnTextDialog("OK")
     }
 }

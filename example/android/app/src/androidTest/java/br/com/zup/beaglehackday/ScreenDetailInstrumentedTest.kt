@@ -40,13 +40,13 @@ class ScreenDetailInstrumentedTest: BaseScreenInstrumentedTests() {
     @Test
     fun text_detail_validation_is_being_rendered() {
         ScreenRobot()
-            .checkOnText("This navigation is awesome!")
+            .checkTextIsDisplayed("This navigation is awesome!")
     }
 
     @Test
     fun navigationBar_heart_icon_validation_is_being_rendered_and_click(){
         ScreenRobot()
-            .viewAndClick("heartIconDetail".toAndroidId())
+            .checkViewIsDisplayedAndClickOnIt("heartIconDetail".toAndroidId())
             .clickOnTextDialog("OK")
     }
 

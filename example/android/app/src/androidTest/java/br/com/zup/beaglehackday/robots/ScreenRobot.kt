@@ -35,7 +35,7 @@ import org.hamcrest.Matchers
 
 class ScreenRobot {
 
-    fun checkViewIdIsDisplayed(id: Int): ScreenRobot {
+    fun checkViewIsDisplayed(id: Int): ScreenRobot {
         WaitHelper.waitForWithId(id)
         onView(ViewMatchers.withId(id)).check(
             matches(
@@ -45,8 +45,8 @@ class ScreenRobot {
         return this
     }
 
-    fun viewAndClick(id: Int): ScreenRobot {
-        checkViewIdIsDisplayed(id)
+    fun checkViewIsDisplayedAndClickOnIt(id: Int): ScreenRobot {
+        checkViewIsDisplayed(id)
         clickView(id)
         return this
     }
@@ -61,7 +61,7 @@ class ScreenRobot {
         return this
     }
 
-    fun checkOnText(text: String): ScreenRobot {
+    fun checkTextIsDisplayed(text: String): ScreenRobot {
         onView(Matchers.allOf(withText(text), isDisplayed()))
         return this
     }

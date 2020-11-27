@@ -34,11 +34,4 @@ object WaitHelper {
             element = Espresso.onView(ViewMatchers.withId(id))
         } while (!MatcherExtension.exists(element))
     }
-
-    fun waitForWithElement(element : ViewInteraction){
-        if(MatcherExtension.exists(element))
-            return
-        else
-            waitForWithElement(element)
-    }
 }
