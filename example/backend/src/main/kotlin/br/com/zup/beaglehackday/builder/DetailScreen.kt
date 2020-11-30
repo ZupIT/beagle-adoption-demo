@@ -22,10 +22,12 @@
 
 package br.com.zup.beaglehackday.builder
 
+import br.com.zup.beagle.ext.setId
 import br.com.zup.beagle.widget.Widget
 import br.com.zup.beagle.widget.action.Alert
 import br.com.zup.beagle.widget.core.TextAlignment
 import br.com.zup.beagle.widget.layout.*
+import br.com.zup.beagle.widget.layout.extensions.setId
 import br.com.zup.beagle.widget.ui.ImagePath
 import br.com.zup.beagle.widget.ui.Text
 
@@ -49,7 +51,7 @@ class DetailScreen : ScreenBuilder {
                         message = "Heart message",
                         labelOk = "ok"
                     )
-                )
+                ).setId("heartIconDetail")
             )
         )
     }
@@ -57,7 +59,7 @@ class DetailScreen : ScreenBuilder {
     private fun screenWidgets(): Widget {
         return Container(
             children = listOf(
-                Text("This navigation is awesome!", alignment = TextAlignment.CENTER)
+                Text("This navigation is awesome!", alignment = TextAlignment.CENTER).setId("textDetail")
             )
         )
     }

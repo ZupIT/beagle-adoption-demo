@@ -26,6 +26,7 @@ import br.com.zup.beagle.core.CornerRadius
 import br.com.zup.beagle.core.PositionType
 import br.com.zup.beagle.core.Style
 import br.com.zup.beagle.ext.applyStyle
+import br.com.zup.beagle.ext.setId
 import br.com.zup.beagle.ext.unitPercent
 import br.com.zup.beagle.ext.unitReal
 import br.com.zup.beagle.widget.Widget
@@ -37,6 +38,7 @@ import br.com.zup.beagle.widget.context.ContextData
 import br.com.zup.beagle.widget.context.expressionOf
 import br.com.zup.beagle.widget.core.*
 import br.com.zup.beagle.widget.layout.*
+import br.com.zup.beagle.widget.layout.extensions.setId
 import br.com.zup.beagle.widget.ui.Button
 import br.com.zup.beagle.widget.ui.Image
 import br.com.zup.beagle.widget.ui.ImagePath.Local
@@ -68,7 +70,7 @@ class OutfitScreen : ScreenBuilder {
                         message = "Heart message",
                         labelOk = "ok"
                     )
-                ),
+                ).setId("heartIcon"),
                 NavigationBarItem(
                     text = "Bag Icon",
                     image = Local.justMobile("bag"),
@@ -77,7 +79,7 @@ class OutfitScreen : ScreenBuilder {
                         message = "Bag message",
                         labelOk = "ok"
                     )
-                )
+                ).setId("bagIcon")
             )
         )
     }
@@ -114,7 +116,7 @@ class OutfitScreen : ScreenBuilder {
             text = "Add to cart",
             styleId = "customButton",
             onPress = listOf(Navigate.PushView(Route.Remote("/detail")))
-        )
+        ).setId("submitButton")
     }
 
     private fun outfitSize(): Widget {
@@ -124,7 +126,7 @@ class OutfitScreen : ScreenBuilder {
             Style(
                 margin = EdgeValue(bottom = 10.unitReal())
             )
-        )
+        ).setId("sizeSelector")
     }
 
     private fun buildSetContextFor(value: String): SetContext {
@@ -155,7 +157,7 @@ class OutfitScreen : ScreenBuilder {
             Style(
                 margin = EdgeValue(top = 10.unitReal())
             )
-        )
+        ).setId("colorSelector")
     }
 
     private fun outfitImage(): Widget {
@@ -166,7 +168,7 @@ class OutfitScreen : ScreenBuilder {
                     mode = ImageContentMode.CENTER
                 ).applyStyle(
                     Style(cornerRadius = CornerRadius(20.0))
-                ),
+                ).setId("shirtImage"),
                 ImageDetail(
                     value = expressionOf("@{shirtData.price}"),
                     image = ImageType.RED_HEART
@@ -176,7 +178,7 @@ class OutfitScreen : ScreenBuilder {
                         margin = EdgeValue(horizontal = 10.unitReal()),
                         positionType = PositionType.ABSOLUTE
                     )
-                )
+                ).setId("imageDetail")
             )
         ).applyStyle(
             Style(
