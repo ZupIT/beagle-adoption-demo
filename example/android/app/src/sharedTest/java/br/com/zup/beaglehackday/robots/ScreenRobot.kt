@@ -51,7 +51,7 @@ class ScreenRobot {
         return this
     }
 
-    private fun clickView(id: Int): ScreenRobot{
+    private fun clickView(id: Int): ScreenRobot {
         onView(ViewMatchers.withId(id)).perform(ViewActions.click())
         return this
     }
