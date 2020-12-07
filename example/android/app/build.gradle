@@ -28,6 +28,7 @@ apply plugin: 'kotlin-kapt'
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.3"
+    testOptions.unitTests.includeAndroidResources = true
     defaultConfig {
         applicationId "br.com.zup.beaglehackday"
         minSdkVersion 19
@@ -58,6 +59,13 @@ android {
             java.srcDirs += "src/sharedTest/java"
         }
     }
+    testOptions {
+        unitTests.returnDefaultValues = true
+
+        unitTests.all {
+            useJUnitPlatform()
+        }
+    }
 
 }
 
@@ -83,12 +91,17 @@ dependencies {
 
     implementation "androidx.multidex:multidex:$multidex_version"
 
+    testImplementation 'org.robolectric:robolectric:4.3'
+
     testImplementation 'junit:junit:4.13.1'
     testImplementation 'androidx.test.ext:junit:1.1.2'
     testImplementation 'androidx.test:runner:1.3.0'
     testImplementation 'androidx.test:rules:1.3.0'
     testImplementation 'androidx.test.espresso:espresso-core:3.3.0'
-    androidTestImplementation 'androidx.test:runner:1.3.0'
-    androidTestImplementation 'androidx.test:rules:1.3.0'
+    testImplementation 'com.facebook.soloader:soloader:0.9.0'
+
+
+    androidTestImplementation 'androidx.test:runner:1.3.1-alpha02'
+    androidTestImplementation 'androidx.test:rules:1.3.1-alpha02'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 }
