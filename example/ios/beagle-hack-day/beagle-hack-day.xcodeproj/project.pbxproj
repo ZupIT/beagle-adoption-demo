@@ -17,27 +17,14 @@
 		42846B5424D4FB9E00B94DE3 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42846B5324D4FB9E00B94DE3 /* HomeRouter.swift */; };
 		42846B5624D500C500B94DE3 /* HomeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42846B5524D500C500B94DE3 /* HomeFactory.swift */; };
 		42DF8E2224D88BD30027C544 /* SelectorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DF8E2124D88BD30027C544 /* SelectorCell.swift */; };
-		6E5B0E822549DB9A0099D6F6 /* CacheLRU.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5B0E742549DB9A0099D6F6 /* CacheLRU.swift */; };
-		6E5B0E832549DB9A0099D6F6 /* DoublyLinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5B0E752549DB9A0099D6F6 /* DoublyLinkedList.swift */; };
-		6E5B0E852549DB9A0099D6F6 /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5B0E782549DB9A0099D6F6 /* CacheManager.swift */; };
-		6E5B0E872549DB9A0099D6F6 /* CacheDiskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5B0E7C2549DB9A0099D6F6 /* CacheDiskManager.swift */; };
-		6E5B0E882549DB9A0099D6F6 /* CoreCache.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6E5B0E7D2549DB9A0099D6F6 /* CoreCache.xcdatamodeld */; };
-		6E5B0E8A2549DB9A0099D6F6 /* CacheEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5B0E812549DB9A0099D6F6 /* CacheEntity+CoreDataProperties.swift */; };
-		6E5B0E8D2549DBD10099D6F6 /* BeagleLoggerDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5B0E8C2549DBD10099D6F6 /* BeagleLoggerDefault.swift */; };
-		6E5B0E9A2549DBFE0099D6F6 /* HttpRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5B0E952549DBFE0099D6F6 /* HttpRequestBuilder.swift */; };
-		6E5B0E9B2549DBFE0099D6F6 /* NetworkClientDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5B0E962549DBFE0099D6F6 /* NetworkClientDefault.swift */; };
 		7C015B382480160D00E5FF77 /* SizeSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C015B372480160D00E5FF77 /* SizeSelector.swift */; };
 		7C015B3A2480173D00E5FF77 /* ColorSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C015B392480173D00E5FF77 /* ColorSelector.swift */; };
-		7C015B3C24815BDD00E5FF77 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C015B3B24815BDD00E5FF77 /* BackgroundView.swift */; };
 		7C015B3E248177E300E5FF77 /* ImageDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C015B3D248177E300E5FF77 /* ImageDetail.swift */; };
 		7C015B4424818B7A00E5FF77 /* Components+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C015B4224818B7A00E5FF77 /* Components+Decodable.swift */; };
 		7C5CC786247DBA2300F787D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5CC785247DBA2300F787D4 /* AppDelegate.swift */; };
 		7C5CC78A247DBA2300F787D4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5CC789247DBA2300F787D4 /* HomeViewController.swift */; };
 		7C5CC78F247DBA2800F787D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C5CC78E247DBA2800F787D4 /* Assets.xcassets */; };
 		7C5CC792247DBA2800F787D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C5CC790247DBA2800F787D4 /* LaunchScreen.storyboard */; };
-		7C5CC79A247DBC9700F787D4 /* BeagleConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5CC799247DBC9700F787D4 /* BeagleConfig.swift */; };
-		7C5CC79D247DBD8500F787D4 /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5CC79C247DBD8500F787D4 /* Styles.swift */; };
-		7C5CC79F247DBDF800F787D4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5CC79E247DBDF800F787D4 /* Constants.swift */; };
 		7C5CC7A4247DC90600F787D4 /* ColorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5CC7A3247DC90600F787D4 /* ColorCell.swift */; };
 		7C5CC7A7247E9D7F00F787D4 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5CC7A6247E9D7F00F787D4 /* UIImage+Extension.swift */; };
 		7C5CC7A9247E9E4500F787D4 /* UIView+AutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5CC7A8247E9E4500F787D4 /* UIView+AutoLayout.swift */; };
@@ -47,6 +34,14 @@
 		7CA127D0248EBE67009F2E97 /* CharlesWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA127CF248EBE67009F2E97 /* CharlesWorker.swift */; };
 		7CDDD03F24A4103E0028B07B /* UIColor+hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDDD03E24A4103E0028B07B /* UIColor+hex.swift */; };
 		7CF5921A24A6684F00FD311C /* ImageDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF5921924A6684F00FD311C /* ImageDetails.swift */; };
+		F1A2F0B42667C94900B52FA3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A2F0A72667C94900B52FA3 /* Constants.swift */; };
+		F1A2F0B52667C94900B52FA3 /* BeagleConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A2F0A82667C94900B52FA3 /* BeagleConfig.swift */; };
+		F1A2F0B62667C94900B52FA3 /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A2F0A92667C94900B52FA3 /* Styles.swift */; };
+		F1A2F0B72667C94900B52FA3 /* BeagleLoggerDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A2F0AB2667C94900B52FA3 /* BeagleLoggerDefault.swift */; };
+		F1A2F0B82667C94900B52FA3 /* CoreCache.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F1A2F0AE2667C94900B52FA3 /* CoreCache.xcdatamodeld */; };
+		F1A2F0B92667C94900B52FA3 /* HttpRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A2F0B12667C94900B52FA3 /* HttpRequestBuilder.swift */; };
+		F1A2F0BA2667C94900B52FA3 /* NetworkClientDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A2F0B22667C94900B52FA3 /* NetworkClientDefault.swift */; };
+		F1A2F0BB2667C94900B52FA3 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A2F0B32667C94900B52FA3 /* BackgroundView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,18 +56,8 @@
 		42846B5324D4FB9E00B94DE3 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		42846B5524D500C500B94DE3 /* HomeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFactory.swift; sourceTree = "<group>"; };
 		42DF8E2124D88BD30027C544 /* SelectorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectorCell.swift; sourceTree = "<group>"; };
-		6E5B0E742549DB9A0099D6F6 /* CacheLRU.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheLRU.swift; sourceTree = "<group>"; };
-		6E5B0E752549DB9A0099D6F6 /* DoublyLinkedList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoublyLinkedList.swift; sourceTree = "<group>"; };
-		6E5B0E782549DB9A0099D6F6 /* CacheManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
-		6E5B0E7C2549DB9A0099D6F6 /* CacheDiskManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheDiskManager.swift; sourceTree = "<group>"; };
-		6E5B0E7E2549DB9A0099D6F6 /* CoreCache.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreCache.xcdatamodel; sourceTree = "<group>"; };
-		6E5B0E812549DB9A0099D6F6 /* CacheEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CacheEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		6E5B0E8C2549DBD10099D6F6 /* BeagleLoggerDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeagleLoggerDefault.swift; sourceTree = "<group>"; };
-		6E5B0E952549DBFE0099D6F6 /* HttpRequestBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpRequestBuilder.swift; sourceTree = "<group>"; };
-		6E5B0E962549DBFE0099D6F6 /* NetworkClientDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkClientDefault.swift; sourceTree = "<group>"; };
 		7C015B372480160D00E5FF77 /* SizeSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeSelector.swift; sourceTree = "<group>"; };
 		7C015B392480173D00E5FF77 /* ColorSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSelector.swift; sourceTree = "<group>"; };
-		7C015B3B24815BDD00E5FF77 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		7C015B3D248177E300E5FF77 /* ImageDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetail.swift; sourceTree = "<group>"; };
 		7C015B4224818B7A00E5FF77 /* Components+Decodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Components+Decodable.swift"; sourceTree = "<group>"; };
 		7C5CC782247DBA2300F787D4 /* beagle-hack-day.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "beagle-hack-day.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,9 +66,6 @@
 		7C5CC78E247DBA2800F787D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7C5CC791247DBA2800F787D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7C5CC793247DBA2800F787D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7C5CC799247DBC9700F787D4 /* BeagleConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeagleConfig.swift; sourceTree = "<group>"; };
-		7C5CC79C247DBD8500F787D4 /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
-		7C5CC79E247DBDF800F787D4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		7C5CC7A3247DC90600F787D4 /* ColorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCell.swift; sourceTree = "<group>"; };
 		7C5CC7A6247E9D7F00F787D4 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		7C5CC7A8247E9E4500F787D4 /* UIView+AutoLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+AutoLayout.swift"; sourceTree = "<group>"; };
@@ -94,6 +76,14 @@
 		7CDDD03E24A4103E0028B07B /* UIColor+hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+hex.swift"; sourceTree = "<group>"; };
 		7CF5921924A6684F00FD311C /* ImageDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetails.swift; sourceTree = "<group>"; };
 		B795AB865951846B0359023F /* Pods-beagle-hack-day.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-beagle-hack-day.release.xcconfig"; path = "Target Support Files/Pods-beagle-hack-day/Pods-beagle-hack-day.release.xcconfig"; sourceTree = "<group>"; };
+		F1A2F0A72667C94900B52FA3 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		F1A2F0A82667C94900B52FA3 /* BeagleConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeagleConfig.swift; sourceTree = "<group>"; };
+		F1A2F0A92667C94900B52FA3 /* Styles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
+		F1A2F0AB2667C94900B52FA3 /* BeagleLoggerDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeagleLoggerDefault.swift; sourceTree = "<group>"; };
+		F1A2F0AF2667C94900B52FA3 /* CoreCache.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreCache.xcdatamodel; sourceTree = "<group>"; };
+		F1A2F0B12667C94900B52FA3 /* HttpRequestBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpRequestBuilder.swift; sourceTree = "<group>"; };
+		F1A2F0B22667C94900B52FA3 /* NetworkClientDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkClientDefault.swift; sourceTree = "<group>"; };
+		F1A2F0B32667C94900B52FA3 /* BackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,53 +138,6 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
-		6E5B0E722549DB9A0099D6F6 /* Cache */ = {
-			isa = PBXGroup;
-			children = (
-				6E5B0E732549DB9A0099D6F6 /* LRU */,
-				6E5B0E782549DB9A0099D6F6 /* CacheManager.swift */,
-				6E5B0E7B2549DB9A0099D6F6 /* CoreData */,
-			);
-			name = Cache;
-			path = ../../../../../../beagle/iOS/Example/BeagleDemo/BeagleDemo/BeagleConfig/Cache;
-			sourceTree = "<group>";
-		};
-		6E5B0E732549DB9A0099D6F6 /* LRU */ = {
-			isa = PBXGroup;
-			children = (
-				6E5B0E742549DB9A0099D6F6 /* CacheLRU.swift */,
-				6E5B0E752549DB9A0099D6F6 /* DoublyLinkedList.swift */,
-			);
-			path = LRU;
-			sourceTree = "<group>";
-		};
-		6E5B0E7B2549DB9A0099D6F6 /* CoreData */ = {
-			isa = PBXGroup;
-			children = (
-				6E5B0E7C2549DB9A0099D6F6 /* CacheDiskManager.swift */,
-				6E5B0E7D2549DB9A0099D6F6 /* CoreCache.xcdatamodeld */,
-				6E5B0E812549DB9A0099D6F6 /* CacheEntity+CoreDataProperties.swift */,
-			);
-			path = CoreData;
-			sourceTree = "<group>";
-		};
-		6E5B0E8B2549DBD10099D6F6 /* Logger */ = {
-			isa = PBXGroup;
-			children = (
-				6E5B0E8C2549DBD10099D6F6 /* BeagleLoggerDefault.swift */,
-			);
-			path = Logger;
-			sourceTree = "<group>";
-		};
-		6E5B0E8E2549DBFE0099D6F6 /* Network */ = {
-			isa = PBXGroup;
-			children = (
-				6E5B0E952549DBFE0099D6F6 /* HttpRequestBuilder.swift */,
-				6E5B0E962549DBFE0099D6F6 /* NetworkClientDefault.swift */,
-			);
-			path = Network;
-			sourceTree = "<group>";
-		};
 		7C015B35248015EA00E5FF77 /* DesignSystem */ = {
 			isa = PBXGroup;
 			children = (
@@ -237,11 +180,11 @@
 		7C5CC784247DBA2300F787D4 /* beagle-hack-day */ = {
 			isa = PBXGroup;
 			children = (
+				F1A2F0A62667C94900B52FA3 /* BeagleConfigurations */,
 				7CA127CE248EBE47009F2E97 /* Worker */,
 				7C015B35248015EA00E5FF77 /* DesignSystem */,
 				7C5CC7A5247E9D6A00F787D4 /* Extensions */,
 				7C5CC7A2247DC8F100F787D4 /* CustomComponents */,
-				7C5CC79B247DBD7600F787D4 /* BeagleConfigurations */,
 				7C5CC785247DBA2300F787D4 /* AppDelegate.swift */,
 				42846B4D24D4C92C00B94DE3 /* Scene */,
 				7C5CC78E247DBA2800F787D4 /* Assets.xcassets */,
@@ -249,20 +192,6 @@
 				7C5CC793247DBA2800F787D4 /* Info.plist */,
 			);
 			path = "beagle-hack-day";
-			sourceTree = "<group>";
-		};
-		7C5CC79B247DBD7600F787D4 /* BeagleConfigurations */ = {
-			isa = PBXGroup;
-			children = (
-				6E5B0E8E2549DBFE0099D6F6 /* Network */,
-				6E5B0E8B2549DBD10099D6F6 /* Logger */,
-				6E5B0E722549DB9A0099D6F6 /* Cache */,
-				7C5CC799247DBC9700F787D4 /* BeagleConfig.swift */,
-				7C5CC79C247DBD8500F787D4 /* Styles.swift */,
-				7C5CC79E247DBDF800F787D4 /* Constants.swift */,
-				7C015B3B24815BDD00E5FF77 /* BackgroundView.swift */,
-			);
-			path = BeagleConfigurations;
 			sourceTree = "<group>";
 		};
 		7C5CC7A2247DC8F100F787D4 /* CustomComponents */ = {
@@ -309,6 +238,53 @@
 				B795AB865951846B0359023F /* Pods-beagle-hack-day.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		F1A2F0A62667C94900B52FA3 /* BeagleConfigurations */ = {
+			isa = PBXGroup;
+			children = (
+				F1A2F0A72667C94900B52FA3 /* Constants.swift */,
+				F1A2F0A82667C94900B52FA3 /* BeagleConfig.swift */,
+				F1A2F0A92667C94900B52FA3 /* Styles.swift */,
+				F1A2F0AA2667C94900B52FA3 /* Logger */,
+				F1A2F0AC2667C94900B52FA3 /* Cache */,
+				F1A2F0B02667C94900B52FA3 /* Network */,
+				F1A2F0B32667C94900B52FA3 /* BackgroundView.swift */,
+			);
+			path = BeagleConfigurations;
+			sourceTree = "<group>";
+		};
+		F1A2F0AA2667C94900B52FA3 /* Logger */ = {
+			isa = PBXGroup;
+			children = (
+				F1A2F0AB2667C94900B52FA3 /* BeagleLoggerDefault.swift */,
+			);
+			path = Logger;
+			sourceTree = "<group>";
+		};
+		F1A2F0AC2667C94900B52FA3 /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				F1A2F0AD2667C94900B52FA3 /* CoreData */,
+			);
+			path = Cache;
+			sourceTree = "<group>";
+		};
+		F1A2F0AD2667C94900B52FA3 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				F1A2F0AE2667C94900B52FA3 /* CoreCache.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		F1A2F0B02667C94900B52FA3 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				F1A2F0B12667C94900B52FA3 /* HttpRequestBuilder.swift */,
+				F1A2F0B22667C94900B52FA3 /* NetworkClientDefault.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -425,43 +401,38 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1A2F0B62667C94900B52FA3 /* Styles.swift in Sources */,
+				F1A2F0B92667C94900B52FA3 /* HttpRequestBuilder.swift in Sources */,
+				F1A2F0B42667C94900B52FA3 /* Constants.swift in Sources */,
 				7C5CC7AF247EF13900F787D4 /* SelectorType.swift in Sources */,
 				7C5CC7A7247E9D7F00F787D4 /* UIImage+Extension.swift in Sources */,
-				6E5B0E8A2549DB9A0099D6F6 /* CacheEntity+CoreDataProperties.swift in Sources */,
-				6E5B0E882549DB9A0099D6F6 /* CoreCache.xcdatamodeld in Sources */,
 				7CF5921A24A6684F00FD311C /* ImageDetails.swift in Sources */,
-				7C5CC79F247DBDF800F787D4 /* Constants.swift in Sources */,
+				F1A2F0BA2667C94900B52FA3 /* NetworkClientDefault.swift in Sources */,
+				F1A2F0B72667C94900B52FA3 /* BeagleLoggerDefault.swift in Sources */,
 				42303AD624D8DC60005ED66E /* HomePresenter.swift in Sources */,
 				7C5CC78A247DBA2300F787D4 /* HomeViewController.swift in Sources */,
-				6E5B0E872549DB9A0099D6F6 /* CacheDiskManager.swift in Sources */,
+				F1A2F0BB2667C94900B52FA3 /* BackgroundView.swift in Sources */,
 				42846B5624D500C500B94DE3 /* HomeFactory.swift in Sources */,
 				7CA127D0248EBE67009F2E97 /* CharlesWorker.swift in Sources */,
 				42303AD024D8C738005ED66E /* HomeInteractor.swift in Sources */,
-				7C5CC79A247DBC9700F787D4 /* BeagleConfig.swift in Sources */,
 				7C015B382480160D00E5FF77 /* SizeSelector.swift in Sources */,
 				7C5CC7AD247EEB6900F787D4 /* SizeCell.swift in Sources */,
-				6E5B0E8D2549DBD10099D6F6 /* BeagleLoggerDefault.swift in Sources */,
 				7C5CC7A9247E9E4500F787D4 /* UIView+AutoLayout.swift in Sources */,
 				7C015B4424818B7A00E5FF77 /* Components+Decodable.swift in Sources */,
+				F1A2F0B52667C94900B52FA3 /* BeagleConfig.swift in Sources */,
 				42DF8E2224D88BD30027C544 /* SelectorCell.swift in Sources */,
 				42846B5424D4FB9E00B94DE3 /* HomeRouter.swift in Sources */,
-				6E5B0E832549DB9A0099D6F6 /* DoublyLinkedList.swift in Sources */,
 				7C5CC7AB247EE24700F787D4 /* ScrollSelector.swift in Sources */,
 				7C015B3E248177E300E5FF77 /* ImageDetail.swift in Sources */,
-				6E5B0E822549DB9A0099D6F6 /* CacheLRU.swift in Sources */,
 				7C5CC786247DBA2300F787D4 /* AppDelegate.swift in Sources */,
-				7C015B3C24815BDD00E5FF77 /* BackgroundView.swift in Sources */,
 				42303AD224D8C7E7005ED66E /* HomeWorker.swift in Sources */,
-				6E5B0E9A2549DBFE0099D6F6 /* HttpRequestBuilder.swift in Sources */,
 				42303AD424D8CB7A005ED66E /* HomeModels.swift in Sources */,
 				42846B4F24D4C95700B94DE3 /* HomeView.swift in Sources */,
 				7C015B3A2480173D00E5FF77 /* ColorSelector.swift in Sources */,
-				6E5B0E852549DB9A0099D6F6 /* CacheManager.swift in Sources */,
 				7C5CC7A4247DC90600F787D4 /* ColorCell.swift in Sources */,
 				7CDDD03F24A4103E0028B07B /* UIColor+hex.swift in Sources */,
+				F1A2F0B82667C94900B52FA3 /* CoreCache.xcdatamodeld in Sources */,
 				42846B5224D4CB6700B94DE3 /* ViewCode.swift in Sources */,
-				7C5CC79D247DBD8500F787D4 /* Styles.swift in Sources */,
-				6E5B0E9B2549DBFE0099D6F6 /* NetworkClientDefault.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -597,7 +568,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3035FD087C10FA5EAA6793AC /* Pods-beagle-hack-day.debug.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "beagle-hack-day/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -605,6 +577,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Zup.beagle-hack-day";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -614,7 +587,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B795AB865951846B0359023F /* Pods-beagle-hack-day.release.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "beagle-hack-day/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -622,6 +596,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Zup.beagle-hack-day";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -651,12 +626,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		6E5B0E7D2549DB9A0099D6F6 /* CoreCache.xcdatamodeld */ = {
+		F1A2F0AE2667C94900B52FA3 /* CoreCache.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				6E5B0E7E2549DB9A0099D6F6 /* CoreCache.xcdatamodel */,
+				F1A2F0AF2667C94900B52FA3 /* CoreCache.xcdatamodel */,
 			);
-			currentVersion = 6E5B0E7E2549DB9A0099D6F6 /* CoreCache.xcdatamodel */;
+			currentVersion = F1A2F0AF2667C94900B52FA3 /* CoreCache.xcdatamodel */;
 			path = CoreCache.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

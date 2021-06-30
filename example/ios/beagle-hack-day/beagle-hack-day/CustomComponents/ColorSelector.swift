@@ -16,7 +16,6 @@
  */
 
 import Beagle
-import BeagleSchema
 
 struct Color: AutoDecodable {
     let hex: String
@@ -26,11 +25,16 @@ struct Color: AutoDecodable {
 struct ColorSelector: Widget, AutoDecodable {
     var widgetProperties: WidgetProperties
     var colors: [Color]
+    var height: Float
     
     func toView(renderer: BeagleRenderer) -> UIView {
-        let view = ScrollSelector(selectorType: .color(colors: colors.map { $0.hex }))
+        let view = ScrollSelector(selectorType: .color(colors: colors.map { $0.hex }), height: height)
         view.onItemPress = { index in
-            renderer.controller.execute(actions: [self.colors[index].onPress], origin: view)
+            renderer.controller?.execute(
+                actions: [self.colors[index].onPress],
+                event: "",
+                origin: view
+            )
         }
         return view
     }

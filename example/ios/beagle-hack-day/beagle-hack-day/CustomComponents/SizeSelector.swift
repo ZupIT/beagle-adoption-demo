@@ -16,15 +16,18 @@
  */
 
 import Beagle
-import BeagleSchema
 
 struct SizeSelector: Widget, AutoDecodable {
     var widgetProperties: WidgetProperties
     
     var sizes: [String]
+    var height: Float
     
     func toView(renderer: BeagleRenderer) -> UIView {
-        let view = ScrollSelector(selectorType: .size(sizes: sizes))
+        let view = ScrollSelector(
+            selectorType: .size(sizes: sizes),
+            height: height
+        )
         return view
     }
 }

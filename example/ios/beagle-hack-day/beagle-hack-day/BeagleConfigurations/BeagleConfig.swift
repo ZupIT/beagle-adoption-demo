@@ -16,6 +16,7 @@
  */
 
 import Beagle
+import BeagleDefaults
 
 class BeagleConfig {
     static let dependencies = BeagleDependencies()

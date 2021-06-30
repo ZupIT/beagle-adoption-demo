@@ -22,6 +22,7 @@
 
 package br.com.zup.beaglehackday.builder
 
+import br.com.zup.beagle.annotation.BeaglePreview
 import br.com.zup.beagle.core.CornerRadius
 import br.com.zup.beagle.core.PositionType
 import br.com.zup.beagle.core.Style
@@ -49,8 +50,10 @@ import br.com.zup.beaglehackday.widget.ColorSelector
 import br.com.zup.beaglehackday.widget.ImageDetail
 import br.com.zup.beaglehackday.widget.SizeSelector
 
-class OutfitScreen : ScreenBuilder {
+@BeaglePreview
+fun livePreview() = OutfitScreen()
 
+class OutfitScreen : ScreenBuilder {
     override fun build() =
         Screen(
             navigationBar = navBar(),
@@ -121,7 +124,8 @@ class OutfitScreen : ScreenBuilder {
 
     private fun outfitSize(): Widget {
         return SizeSelector(
-            listOf(SizeType.XS, SizeType.S, SizeType.M, SizeType.L, SizeType.XL)
+            listOf(SizeType.XS, SizeType.S, SizeType.M, SizeType.L, SizeType.XL),
+            height = 50.0
         ).applyStyle(
             Style(
                 margin = EdgeValue(bottom = 10.unitReal())
@@ -152,10 +156,12 @@ class OutfitScreen : ScreenBuilder {
                     hex = "#B38B6D",
                     onPress = buildSetContextFor(value = "$29.99")
                 )
-            )
+            ),
+            height = 60.0
         ).applyStyle(
             Style(
-                margin = EdgeValue(top = 10.unitReal())
+                margin = EdgeValue(top = 10.unitReal()),
+                size = Size(height = UnitValue.real(80))
             )
         ).setId("colorSelector")
     }

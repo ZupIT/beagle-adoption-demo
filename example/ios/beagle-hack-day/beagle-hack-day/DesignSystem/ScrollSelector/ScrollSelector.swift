@@ -41,8 +41,12 @@ class ScrollSelector: UIView {
     // MARK: Properties
     var onItemPress: ((_ index: Int) -> ())?
     
-    private let scrollSelectorPreferedHeight: CGFloat = 60
+    private var scrollSelectorPreferedHeight: CGFloat {
+        CGFloat(height + 10)
+    }
     private var type: SelectorType
+    private let height: Float
+    
     private var selectedIndex = 0 {
         didSet {
             onItemPress?(selectedIndex)
@@ -50,8 +54,9 @@ class ScrollSelector: UIView {
     }
     
     // MARK: Init
-    init(selectorType: SelectorType) {
+    init(selectorType: SelectorType, height: Float) {
         self.type = selectorType
+        self.height = height
         super.init(frame: .zero)
         setup()
     }
@@ -101,7 +106,7 @@ extension ScrollSelector: UICollectionViewDelegateFlowLayout, UICollectionViewDa
     private func makeCollectionViewFlowLayout() -> UICollectionViewFlowLayout {
         let flowLayout = UICollectionViewFlowLayout()
         flowLayout.scrollDirection = .horizontal
-        flowLayout.itemSize = .init(width: 40, height: 40)
+        flowLayout.itemSize = .init(width: CGFloat(height), height: CGFloat(height))
         return flowLayout
     }
     
@@ -114,10 +119,14 @@ extension ScrollSelector: UICollectionViewDelegateFlowLayout, UICollectionViewDa
         type.itens().count
     }
     
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//        CGSize(width: CGFloat(height), height: CGFloat(height))
+//    }
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: type.reuseId(), for: indexPath)
-        (cell as? SelectorCell)?.setup(text: type.itens()[indexPath.row], isSelected: indexPath.row == selectedIndex)
-        return cell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: type.reuseId(), for: indexPath) as? SelectorCell
+        cell?.setup(text: type.itens()[indexPath.row], isSelected: indexPath.row == selectedIndex, height: CGFloat(height))
+        return cell ?? UICollectionViewCell()
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

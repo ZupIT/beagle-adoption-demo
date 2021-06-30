@@ -20,7 +20,7 @@ import Foundation
 enum SelectorType {
     case color(colors: [String])
     case size(sizes: [String])
-    
+
     func itens() -> [String] {
         switch self {
         case .color(let colorsList):

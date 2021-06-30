@@ -33,5 +33,6 @@ data class Color(
 
 @RegisterWidget
 data class ColorSelector(
-    val colors: List<Color>
+    val colors: List<Color>,
+    val height: Double
 ) : Widget()

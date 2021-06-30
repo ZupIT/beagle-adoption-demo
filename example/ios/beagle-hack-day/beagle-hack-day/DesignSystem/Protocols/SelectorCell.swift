@@ -16,7 +16,8 @@
  */
 
 import Foundation
+import UIKit
 
-protocol SelectorCell {
-    func setup(text: String, isSelected: Bool)
+protocol SelectorCell: UICollectionViewCell {
+    func setup(text: String, isSelected: Bool, height: CGFloat)
 }

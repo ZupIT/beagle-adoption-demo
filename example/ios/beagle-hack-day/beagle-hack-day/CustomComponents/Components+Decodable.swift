@@ -17,7 +17,6 @@
 * limitations under the License.
 */
 
-import BeagleSchema
 import Beagle
 
 // MARK: Color Decodable
@@ -39,6 +38,7 @@ extension Color {
 extension ColorSelector {
     enum CodingKeys: String, CodingKey {
         case colors
+        case height
     }
 
     internal init(from decoder: Decoder) throws {
@@ -46,6 +46,7 @@ extension ColorSelector {
 
         widgetProperties = try WidgetProperties(from: decoder)
         colors = try container.decode([Color].self, forKey: .colors)
+        height = try container.decode(Float.self, forKey: .height)
     }
 }
 
@@ -69,6 +70,7 @@ extension ImageDetail {
 extension SizeSelector {
     enum CodingKeys: String, CodingKey {
         case sizes
+        case height
     }
 
     internal init(from decoder: Decoder) throws {
@@ -76,5 +78,6 @@ extension SizeSelector {
 
         widgetProperties = try WidgetProperties(from: decoder)
         sizes = try container.decode([String].self, forKey: .sizes)
+        height = try container.decode(Float.self, forKey: .height)
     }
 }

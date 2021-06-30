@@ -16,7 +16,6 @@
  */
 
 import Beagle
-import BeagleSchema
 
 struct ImageDetail: Widget, AutoDecodable {
     var widgetProperties: WidgetProperties

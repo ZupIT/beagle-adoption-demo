@@ -27,6 +27,8 @@ class ColorCell: UICollectionViewCell {
         return view
     }()
     
+    var height: CGFloat = 0
+    
     //MARK: Init
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -44,7 +46,9 @@ class ColorCell: UICollectionViewCell {
 
 //MARK: - SelectorCell
 extension ColorCell: SelectorCell {
-    func setup(text: String, isSelected: Bool) {
+    func setup(text: String, isSelected: Bool, height: CGFloat) {
+        self.height = height
+        layer.cornerRadius = height/2
         handleSelection(color: text, isSelected: isSelected)
     }
     
@@ -70,7 +74,6 @@ extension ColorCell: ViewCode {
     
     func additionalConfigurations() {
         clipsToBounds = true
-        layer.cornerRadius = 20
         layer.borderWidth = 2
     }
 }

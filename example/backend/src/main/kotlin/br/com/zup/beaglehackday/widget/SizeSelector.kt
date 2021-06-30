@@ -28,5 +28,6 @@ import br.com.zup.beaglehackday.enumerator.SizeType
 
 @RegisterWidget
 data class SizeSelector(
-    val sizes: List<SizeType>
+    val sizes: List<SizeType>,
+    val height: Double
 ) : Widget()

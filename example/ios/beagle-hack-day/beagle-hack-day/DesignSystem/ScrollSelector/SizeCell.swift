@@ -25,6 +25,8 @@ class SizeCell: UICollectionViewCell {
         return view
     }()
     
+    var height: CGFloat = 0
+    
     //MARK: Init
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -41,7 +43,9 @@ class SizeCell: UICollectionViewCell {
 
 //MARK: - SelectorCell
 extension SizeCell: SelectorCell {
-    func setup(text: String, isSelected: Bool) {
+    func setup(text: String, isSelected: Bool, height: CGFloat) {
+        self.height = height
+        layer.cornerRadius = height/2
         handleSelection(isSelected: isSelected)
         sizeLabel.text = text
     }
@@ -64,6 +68,5 @@ extension SizeCell: ViewCode {
     
     func additionalConfigurations() {
         clipsToBounds = true
-        layer.cornerRadius = 20
     }
 }

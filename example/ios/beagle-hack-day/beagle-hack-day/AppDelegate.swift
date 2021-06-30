@@ -16,7 +16,6 @@
  */
 
 import Beagle
-import BeagleSchema
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

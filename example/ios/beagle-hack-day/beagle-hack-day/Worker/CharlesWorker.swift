@@ -16,6 +16,7 @@
  */
 
 import Foundation
+import BeagleDefaults
 
 protocol CharlesWorkLogic {
     func login(with username: String, completion: @escaping (CharlesWorkerResult) -> Void)
